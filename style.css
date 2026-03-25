@@ -145,6 +145,25 @@ h1 {
     letter-spacing: 0.3px;
 }
 
+/* Quiz Button */
+.quiz-trigger {
+    background: linear-gradient(135deg, #2e8bff, #a855f7);
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 0.6rem 1.2rem;
+    border-radius: 40px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.85rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.quiz-trigger:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 12px rgba(46, 139, 255, 0.5);
+}
+
 /* Grid cards inspired by Epic Games store */
 .terms-grid {
     display: grid;
@@ -234,7 +253,7 @@ h1 {
     color: #8aa0c0;
 }
 
-/* MODAL */
+/* MODAL - chung cho cả glossary và quiz */
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -338,6 +357,81 @@ h1 {
     font-size: 0.8rem;
 }
 
+/* Quiz Options */
+.quiz-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.quiz-option {
+    background: #1e2430;
+    border: 1px solid #2a3340;
+    border-radius: 60px;
+    padding: 12px 20px;
+    text-align: left;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s;
+    color: #eef2ff;
+}
+
+.quiz-option:hover {
+    background: rgba(46, 139, 255, 0.2);
+    border-color: #2e8bff;
+}
+
+.quiz-option.disabled {
+    opacity: 0.6;
+    cursor: default;
+}
+
+.quiz-option.disabled:hover {
+    background: #1e2430;
+    border-color: #2a3340;
+}
+
+/* Quiz Feedback */
+.quiz-feedback {
+    margin-top: 1rem;
+    padding: 0.8rem;
+    border-radius: 16px;
+    background: rgba(0, 0, 0, 0.3);
+    font-size: 0.95rem;
+}
+
+.quiz-feedback.correct {
+    color: #6fcf97;
+    border-left: 3px solid #6fcf97;
+    background: rgba(111, 207, 151, 0.1);
+}
+
+.quiz-feedback.wrong {
+    color: #ff7675;
+    border-left: 3px solid #ff7675;
+    background: rgba(255, 118, 117, 0.1);
+}
+
+/* Next Quiz Button */
+.next-quiz-btn {
+    margin-top: 20px;
+    background: #2e8bff;
+    border: none;
+    border-radius: 40px;
+    padding: 10px 20px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    font-family: inherit;
+    transition: background 0.2s;
+}
+
+.next-quiz-btn:hover {
+    background: #1a6fd0;
+}
+
 /* footer */
 .page-footer {
     margin-top: 5rem;
@@ -372,5 +466,26 @@ h1 {
 
     .modal-header h3 {
         font-size: 1.5rem;
+    }
+
+    .toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-wrapper {
+        width: 100%;
+    }
+
+    .result-count {
+        text-align: center;
+        display: inline-block;
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+    .quiz-trigger {
+        width: 100%;
+        text-align: center;
     }
 }
