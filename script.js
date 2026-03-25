@@ -1123,6 +1123,582 @@ const glossaryData = [
 {
     term: "Completion Reward",
     definition: "Phần thưởng cho việc hoàn thành một mục tiêu lớn như full map, full collection, hết campaign hoặc toàn bộ challenge."
+},
+{
+    term: "Core Fantasy",
+    definition: "Lời hứa trải nghiệm cốt lõi mà game bán cho người chơi ở tầng cảm xúc và vai trò, ví dụ cảm giác làm sát thủ, sinh tồn tuyệt vọng, hoặc thống trị chiến trường. Nếu mechanic không phục vụ fantasy này thì đó là rác."
+},
+{
+    term: "Pillars",
+    definition: "Các trụ cột thiết kế bất khả xâm phạm dùng để kiểm tra mọi feature, content và quyết định sản phẩm. Pillars tốt giúp team biết nên làm gì và quan trọng hơn là bỏ gì."
+},
+{
+    term: "North Star",
+    definition: "Mục tiêu trải nghiệm tối thượng mà toàn bộ game phải hướng tới. Nó không phải slogan đẹp, mà là tiêu chuẩn sống còn để ra quyết định."
+},
+{
+    term: "Experience Goal",
+    definition: "Trạng thái cảm xúc hoặc hành vi cụ thể mà designer muốn người chơi trải qua ở một đoạn, một mode hoặc toàn bộ game."
+},
+{
+    term: "Design Constraints",
+    definition: "Các giới hạn có chủ đích về thời gian, input, camera, content, scope hoặc công nghệ để buộc thiết kế tập trung và sắc hơn."
+},
+{
+    term: "Possibility Space",
+    definition: "Tổng không gian hành động, hệ quả và trạng thái mà game cho phép tồn tại. Game càng sâu thì possibility space càng giàu nhưng vẫn phải đọc được."
+},
+{
+    term: "State Space",
+    definition: "Tập hợp tất cả trạng thái có thể có của hệ thống trong game, bao gồm người chơi, AI, tài nguyên, môi trường và điều kiện thắng thua."
+},
+{
+    term: "Decision Density",
+    definition: "Mật độ các quyết định có ý nghĩa trên mỗi đơn vị thời gian. Cao quá thì loạn, thấp quá thì nhạt."
+},
+{
+    term: "Decision Latency",
+    definition: "Khoảng thời gian từ lúc người chơi nhận thông tin đến lúc phải ra quyết định. Latency ngắn tạo áp lực, latency dài tạo chiến thuật."
+},
+{
+    term: "Execution Burden",
+    definition: "Mức độ khó trong việc biến một quyết định đúng thành hành động thành công. Chiến thuật hay mà execution quá nặng có thể giết trải nghiệm."
+},
+{
+    term: "Cognitive Bandwidth",
+    definition: "Lượng chú ý và xử lý thông tin mà người chơi còn dư để tiếp nhận hệ thống mới, đọc combat hoặc lên kế hoạch."
+},
+{
+    term: "Mental Model",
+    definition: "Cách người chơi tự hình dung luật chơi và quan hệ nhân quả trong đầu. Game giỏi là game xây được mental model rõ và ít phản bội nó."
+},
+{
+    term: "Expectation Setting",
+    definition: "Quá trình game dạy người chơi nên kỳ vọng điều gì về độ khó, nhịp, reward, punishment và logic hệ thống."
+},
+{
+    term: "Expectation Violation",
+    definition: "Khi game cố tình phá kỳ vọng của người chơi để tạo bất ngờ, sợ hãi hoặc chiều sâu. Làm ngu thì thành khó chịu, làm đúng thì thành đỉnh."
+},
+{
+    term: "Rule Signaling",
+    definition: "Cách game báo cho người chơi biết luật gì đang áp dụng thông qua hình ảnh, âm thanh, bố cục, animation hoặc phản hồi hệ thống."
+},
+{
+    term: "System Legibility",
+    definition: "Mức độ mà người chơi có thể đọc, hiểu và dự đoán được logic của một hệ thống phức tạp."
+},
+{
+    term: "Local Maximum",
+    definition: "Trạng thái người chơi tìm được một chiến thuật hiệu quả trước mắt nên dừng khám phá thêm, dù vẫn còn chiến thuật mạnh hơn."
+},
+{
+    term: "Mastery Trap",
+    definition: "Tình huống người chơi nghĩ mình đã hiểu game nhưng thật ra mới chỉ bám vào một lớp nông, khiến trải nghiệm sớm bị nhàm."
+},
+{
+    term: "False Choice",
+    definition: "Lựa chọn nhìn có vẻ đa dạng nhưng kết quả gần như giống nhau hoặc có một đáp án rõ ràng vượt trội."
+},
+{
+    term: "Illusion of Choice",
+    definition: "Thiết kế tạo cảm giác người chơi đang kiểm soát hoặc chọn đường đi riêng dù hệ thống thực tế khá tuyến tính."
+},
+{
+    term: "Decision Cost",
+    definition: "Cái giá mà người chơi phải trả khi ra quyết định, có thể là tài nguyên, thời gian, rủi ro hoặc cơ hội bị mất."
+},
+{
+    term: "Opportunity Cost",
+    definition: "Giá trị của lựa chọn tốt nhất bị bỏ qua khi người chơi chọn một phương án khác."
+},
+{
+    term: "Path Dependency",
+    definition: "Việc lựa chọn sớm ảnh hưởng mạnh đến những lựa chọn hoặc kết quả có thể xảy ra về sau."
+},
+{
+    term: "Strategic Depth",
+    definition: "Chiều sâu chiến thuật đến từ nhiều lớp quyết định, phản quyết định, đọc tình huống và tối ưu dài hạn."
+},
+{
+    term: "Tactical Depth",
+    definition: "Chiều sâu ở cấp tình huống ngắn hạn, nơi người chơi phải phản ứng đúng với dữ kiện trước mắt."
+},
+{
+    term: "Emergent Complexity",
+    definition: "Độ phức tạp phát sinh từ tương tác giữa các luật đơn giản, không phải từ việc nhét thêm hàng đống cơ chế rời rạc."
+},
+{
+    term: "Combinatorial Depth",
+    definition: "Chiều sâu đến từ số lượng cách kết hợp meaningful giữa kỹ năng, item, unit, trạng thái hoặc địa hình."
+},
+{
+    term: "Systemic Synergy",
+    definition: "Sự cộng hưởng giữa nhiều hệ thống lớn khiến hành vi ở một hệ thống tạo hậu quả đáng kể lên hệ thống khác."
+},
+{
+    term: "Systemic Friction",
+    definition: "Ma sát có chủ đích giữa các hệ thống để ép người chơi phải đánh đổi thay vì tối ưu mọi thứ cùng lúc."
+},
+{
+    term: "Counter-System",
+    definition: "Một hệ hoặc lớp luật được thiết kế để kìm hãm, đối trọng hoặc kiểm soát sức mạnh của một hệ khác."
+},
+{
+    term: "Closed Economy",
+    definition: "Nền kinh tế mà phần lớn tài nguyên lưu thông trong vòng khép kín, có nguồn vào và nguồn ra được kiểm soát chặt."
+},
+{
+    term: "Open Economy",
+    definition: "Nền kinh tế cho phép tài nguyên hoặc giá trị di chuyển rộng và khó kiểm soát hơn, thường thấy khi có trading giữa người chơi."
+},
+{
+    term: "Economic Pressure",
+    definition: "Áp lực mà hệ thống tài nguyên tạo lên quyết định của người chơi, buộc họ phải ưu tiên, tiết kiệm hoặc chấp nhận rủi ro."
+},
+{
+    term: "Dominant Loop",
+    definition: "Vòng lặp mạnh đến mức nuốt hết các loop còn lại, làm người chơi tối ưu một hành vi duy nhất và phá sự đa dạng."
+},
+{
+    term: "Secondary Loop",
+    definition: "Vòng lặp phụ hỗ trợ, bổ sung hoặc làm giàu loop chính mà không được phép lấn át nó."
+},
+{
+    term: "Loop Health",
+    definition: "Mức độ một gameplay loop còn giữ được giá trị sau nhiều lần lặp, không sụp đổ vì nhàm, exploit hoặc reward cạn."
+},
+{
+    term: "Loop Collapse",
+    definition: "Khi một loop mất ý nghĩa vì người chơi tìm ra cách phá, reward không còn hấp dẫn hoặc decision space bị co lại."
+},
+{
+    term: "Retention Driver",
+    definition: "Yếu tố cụ thể khiến người chơi quay lại game như progress dang dở, social obligation, event, build chưa hoàn thiện hoặc reward hẹn giờ."
+},
+{
+    term: "Engagement Driver",
+    definition: "Yếu tố thúc đẩy người chơi ở lại lâu hơn trong một phiên chơi như nhiệm vụ dây chuyền, challenge, social play hoặc dopamine reward."
+},
+{
+    term: "Behavior Shaping",
+    definition: "Thiết kế phần thưởng, giới hạn và phản hồi để dần uốn hành vi người chơi theo hướng mong muốn."
+},
+{
+    term: "Habit Formation",
+    definition: "Quá trình game xây dựng thói quen quay lại thông qua nhịp reward, mục tiêu ngắn hạn và cảm giác mất mát nếu bỏ lỡ."
+},
+{
+    term: "Compounding Value",
+    definition: "Giá trị tăng dần theo thời gian khi một quyết định sớm tạo lợi ích lũy kế về sau."
+},
+{
+    term: "Delayed Gratification",
+    definition: "Thiết kế để người chơi chấp nhận nhịn lợi ích trước mắt nhằm đạt phần thưởng lớn hơn ở tương lai."
+},
+{
+    term: "Immediate Gratification",
+    definition: "Phần thưởng đến ngay sau hành động để củng cố học tập, duy trì hứng thú và tạo cảm giác phản hồi nhanh."
+},
+{
+    term: "Payoff Horizon",
+    definition: "Khoảng thời gian từ lúc người chơi đầu tư đến lúc họ nhận được giá trị thực sự từ đầu tư đó."
+},
+{
+    term: "Progression Pacing",
+    definition: "Nhịp độ mà game trao sức mạnh, nội dung mới và cảm giác tiến bộ cho người chơi."
+},
+{
+    term: "Progression Trough",
+    definition: "Khoảng chững trong tiến trình nơi người chơi không cảm thấy mạnh hơn, không mở khóa gì đáng kể và dễ mất động lực."
+},
+{
+    term: "Power Budget",
+    definition: "Ngân sách sức mạnh mà designer phân bổ cho class, build, item hoặc encounter để giữ balance tổng thể."
+},
+{
+    term: "Complexity Budget",
+    definition: "Giới hạn lượng độ phức tạp mà một feature, system hoặc giai đoạn game được phép gánh."
+},
+{
+    term: "Attention Budget",
+    definition: "Lượng chú ý hữu hạn mà người chơi có thể dành cho các yếu tố trên màn hình hoặc trong một thời điểm."
+},
+{
+    term: "Noise Floor",
+    definition: "Mức độ thông tin, hiệu ứng hoặc tín hiệu nền thấp nhất trên màn hình trước khi mọi thứ bắt đầu khó đọc."
+},
+{
+    term: "Signal-to-Noise Ratio",
+    definition: "Tỉ lệ giữa thông tin thật sự quan trọng và phần rác gây nhiễu trong UI, VFX, âm thanh hoặc level."
+},
+{
+    term: "Saliency",
+    definition: "Mức độ một yếu tố nổi bật và tự kéo sự chú ý của người chơi."
+},
+{
+    term: "Information Hierarchy",
+    definition: "Thứ tự ưu tiên của thông tin mà game muốn người chơi nhận ra đầu tiên, thứ hai, thứ ba."
+},
+{
+    term: "Information Scent",
+    definition: "Dấu hiệu nhỏ cho người chơi cảm giác rằng đi theo hướng này sẽ dẫn tới giá trị, bí mật hoặc mục tiêu."
+},
+{
+    term: "Breadcrumb Economy",
+    definition: "Cách phân bổ những tín hiệu dẫn đường nhỏ sao cho người chơi luôn có mồi để theo nhưng vẫn thấy mình tự khám phá."
+},
+{
+    term: "Curiosity Gap",
+    definition: "Khoảng thiếu thông tin vừa đủ khiến người chơi muốn tiến thêm để biết tiếp chuyện gì sẽ xảy ra."
+},
+{
+    term: "Mystery Box Design",
+    definition: "Thiết kế che giấu một phần thông tin hoặc phần thưởng để kích thích tò mò và dự đoán."
+},
+{
+    term: "Onboarding Debt",
+    definition: "Hậu quả tích tụ khi game không dạy đúng từ đầu, khiến về sau phải vá bằng tooltip, pop-up hoặc ép tutorial dài dòng."
+},
+{
+    term: "Reinforcement Learning",
+    definition: "Trong bối cảnh design, là cách game dùng phần thưởng và hình phạt để khiến người chơi tự học hành vi hiệu quả."
+},
+{
+    term: "Mechanical Literacy",
+    definition: "Mức độ người chơi hiểu ngôn ngữ mechanic của game và biết áp dụng chúng chính xác."
+},
+{
+    term: "Pattern Literacy",
+    definition: "Khả năng đọc quy luật lặp, biến thể và tín hiệu của boss, puzzle hoặc AI."
+},
+{
+    term: "Knowledge Check",
+    definition: "Thử thách kiểm tra xem người chơi đã hiểu một luật, một pattern hoặc một hệ thống nào đó chưa."
+},
+{
+    term: "Execution Check",
+    definition: "Thử thách kiểm tra khả năng thao tác và timing thay vì kiểm tra kiến thức."
+},
+{
+    term: "Build Check",
+    definition: "Thử thách kiểm tra xem người chơi đã chuẩn bị build, item hoặc loadout đủ đúng chưa."
+},
+{
+    term: "Stat Check",
+    definition: "Tình huống kết quả phụ thuộc quá nặng vào chỉ số thay vì kỹ năng hoặc chiến thuật."
+},
+{
+    term: "Soft Skill Check",
+    definition: "Bài test nhắm vào kỹ năng khó định lượng như kiên nhẫn, quan sát, định vị, quản lý áp lực hoặc đọc đối thủ."
+},
+{
+    term: "Mechanical Depth",
+    definition: "Chiều sâu đến từ việc một mechanic đơn lẻ có nhiều ứng dụng, timing, trạng thái và tương tác hơn vẻ ngoài ban đầu."
+},
+{
+    term: "Mechanical Expression",
+    definition: "Mức độ mà người chơi có thể thể hiện trình độ thông qua việc dùng mechanic một cách tinh vi."
+},
+{
+    term: "Verb Compression",
+    definition: "Kỹ thuật làm cho một hành động cơ bản có nhiều công dụng tùy ngữ cảnh thay vì thêm quá nhiều nút riêng."
+},
+{
+    term: "Orthogonality",
+    definition: "Mức độ các hệ thống hoặc lựa chọn khác nhau tạo ra giá trị khác nhau thay vì chỉ là phiên bản đổi màu của nhau."
+},
+{
+    term: "Lateral Choice",
+    definition: "Lựa chọn mở ra phong cách chơi khác chứ không đơn thuần là mạnh hơn."
+},
+{
+    term: "Vertical Choice",
+    definition: "Lựa chọn chủ yếu làm tăng sức mạnh trực tiếp theo trục hơn-kém rõ ràng."
+},
+{
+    term: "Build Commitment",
+    definition: "Mức độ mà người chơi bị khóa vào hướng build sau một chuỗi lựa chọn đầu tư."
+},
+{
+    term: "Respec Pressure",
+    definition: "Áp lực khiến người chơi muốn reset build vì meta, sai lầm trước đó hoặc nội dung sau yêu cầu khác."
+},
+{
+    term: "Degenerate Play",
+    definition: "Hành vi tối ưu nhưng phá trải nghiệm, ví dụ đứng farm vô hạn, kite ngu AI, spam một giải pháp duy nhất."
+},
+{
+    term: "Exploit Surface",
+    definition: "Tổng số điểm mà hệ thống có thể bị người chơi lợi dụng để phá balance hoặc bypass ý đồ thiết kế."
+},
+{
+    term: "Failing Gracefully",
+    definition: "Thiết kế để khi người chơi chơi chưa tốt, họ vẫn hiểu chuyện gì xảy ra và còn động lực thử lại."
+},
+{
+    term: "Punishment Clarity",
+    definition: "Mức độ rõ ràng của hình phạt để người chơi thấy mình bị phạt vì gì và có thể học được gì."
+},
+{
+    term: "Mercy Window",
+    definition: "Khoảng khoan dung ngắn hệ thống cho người chơi cơ hội phục hồi thay vì bị trừng phạt liên hoàn."
+},
+{
+    term: "Recovery Arc",
+    definition: "Quãng chuyển từ trạng thái thua thiệt quay lại trạng thái có thể kiểm soát tình hình."
+},
+{
+    term: "Tension Curve",
+    definition: "Đường lên xuống của áp lực, nguy hiểm và kỳ vọng cảm xúc trong một đoạn chơi."
+},
+{
+    term: "Release Valve",
+    definition: "Khoảng thở có chủ đích sau áp lực cao, giúp người chơi hồi phục tinh thần và tái sẵn sàng cho đợt tiếp theo."
+},
+{
+    term: "Pressure Stack",
+    definition: "Việc chồng nhiều nguồn áp lực cùng lúc như thời gian, địch, tài nguyên thiếu, tầm nhìn xấu và mục tiêu phụ."
+},
+{
+    term: "Tempo Control",
+    definition: "Khả năng của game hoặc người chơi trong việc ép nhịp trận đấu nhanh lên hoặc chậm lại."
+},
+{
+    term: "Initiative",
+    definition: "Lợi thế về quyền ra nhịp hoặc buộc đối thủ phải phản ứng theo mình."
+},
+{
+    term: "Threat Projection",
+    definition: "Phạm vi và cách một đơn vị, skill hoặc hệ thống tạo vùng nguy hiểm mà đối thủ phải tôn trọng."
+},
+{
+    term: "Zone Control",
+    definition: "Khả năng kiểm soát không gian, ép đường đi hoặc cấm đối thủ đứng ở một khu vực."
+},
+{
+    term: "Space Denial",
+    definition: "Tạo nguy hiểm ở một vùng để buộc người chơi khác rời đi, đi vòng hoặc trì hoãn hành động."
+},
+{
+    term: "Positional Advantage",
+    definition: "Lợi thế đến từ địa hình, tầm nhìn, khoảng cách, cao độ hoặc đường rút."
+},
+{
+    term: "Temporal Advantage",
+    definition: "Lợi thế đến từ việc hành động sớm hơn, hồi chiêu nhanh hơn hoặc ép đối thủ lỡ nhịp."
+},
+{
+    term: "Action Economy",
+    definition: "Giá trị tương đối của mỗi hành động trong một lượt, một nhịp combat hoặc một khoảng thời gian ngắn."
+},
+{
+    term: "Turn Efficiency",
+    definition: "Mức độ người chơi tận dụng tối đa giá trị từ một lượt hoặc một chu kỳ hành động."
+},
+{
+    term: "Dead Turn",
+    definition: "Lượt chơi không tạo giá trị đáng kể, thường do thiếu lựa chọn tốt hoặc design quá bó tay."
+},
+{
+    term: "Dead Stat",
+    definition: "Chỉ số tồn tại nhưng hiếm khi quan trọng hoặc không đủ tác động để người chơi quan tâm."
+},
+{
+    term: "Stat Saturation",
+    definition: "Khi tăng thêm chỉ số gần như không còn cảm nhận rõ vì đã chạm trần hữu dụng."
+},
+{
+    term: "Diminishing Returns",
+    definition: "Cơ chế khiến đầu tư thêm vào cùng một hướng cho lợi ích giảm dần, nhằm chặn việc dồn một chỉ số vô hạn."
+},
+{
+    term: "Break Point",
+    definition: "Ngưỡng mà khi vượt qua, hiệu quả của build, skill hoặc chiến thuật thay đổi rõ rệt."
+},
+{
+    term: "Threshold Design",
+    definition: "Thiết kế xoay quanh các mốc kích hoạt có ý nghĩa thay vì tăng tuyến tính đều đều."
+},
+{
+    term: "Granularity",
+    definition: "Mức độ mịn hay thô của các bước điều chỉnh, ví dụ damage tăng từng 1 điểm hay từng 10 điểm."
+},
+{
+    term: "Parameter Sensitivity",
+    definition: "Mức độ một thay đổi nhỏ ở tham số có thể tạo ảnh hưởng lớn đến trải nghiệm tổng thể."
+},
+{
+    term: "Tuning Levers",
+    definition: "Những tham số mà designer có thể kéo lên xuống để chỉnh trải nghiệm mà không phải viết lại hệ thống."
+},
+{
+    term: "Design Surface Area",
+    definition: "Tổng số điểm mà một feature chạm vào các hệ thống khác, từ đó quyết định chi phí làm, test và balance."
+},
+{
+    term: "Cascade Effect",
+    definition: "Hiệu ứng dây chuyền khi thay đổi một biến nhỏ nhưng làm rung chuyển nhiều hệ thống liên quan."
+},
+{
+    term: "Dependency Web",
+    definition: "Mạng lưới phụ thuộc giữa các tính năng, content và hệ thống, càng rối càng khó sửa mà không vỡ chỗ khác."
+},
+{
+    term: "Content Throughput",
+    definition: "Tốc độ mà team có thể sản xuất, kiểm thử và đẩy nội dung mới vào game một cách ổn định."
+},
+{
+    term: "Content Scalability",
+    definition: "Khả năng một hệ thống tiếp nhận thêm nhiều content mới mà không đội chi phí vận hành quá mức."
+},
+{
+    term: "System Burden",
+    definition: "Gánh nặng mà một hệ thống áp lên nhận thức người chơi, QA, balance, content pipeline và live ops."
+},
+{
+    term: "Live Balance",
+    definition: "Quá trình điều chỉnh game đang vận hành thật với dữ liệu và phản hồi cộng đồng thay vì chỉ dựa trên cảm giác nội bộ."
+},
+{
+    term: "Meta Stability",
+    definition: "Mức độ meta giữ được sự đa dạng và không bị một lời giải duy nhất thống trị quá lâu."
+},
+{
+    term: "Meta Volatility",
+    definition: "Mức độ meta thay đổi nhanh sau patch, khám phá mới hoặc tối ưu từ cộng đồng."
+},
+{
+    term: "Patch Shock",
+    definition: "Cú sốc lên meta và hành vi cộng đồng sau một bản cập nhật lớn hoặc một thay đổi balance mạnh."
+},
+{
+    term: "Player Segmentation by Intent",
+    definition: "Phân nhóm người chơi theo mục đích đến với game như cạnh tranh, khám phá, social, collection hoặc chill."
+},
+{
+    term: "Psychographic Segmentation",
+    definition: "Phân nhóm người chơi theo động lực và kiểu hành vi tâm lý thay vì chỉ theo tuổi, quốc gia hoặc thiết bị."
+},
+{
+    term: "Motivation Conflict",
+    definition: "Khi một hệ thống phục vụ rất tốt một nhóm động lực người chơi nhưng lại làm hại nhóm khác."
+},
+{
+    term: "Design for Aspiration",
+    definition: "Thiết kế để người chơi luôn nhìn thấy phiên bản giỏi hơn của chính mình và có lý do để leo tới đó."
+},
+{
+    term: "Skill Gradient",
+    definition: "Độ dốc tăng trưởng kỹ năng từ người mới tới cao thủ. Gradient đẹp giúp học lên đều, không bị vách đá."
+},
+{
+    term: "Learning Cliff",
+    definition: "Điểm mà độ khó học tăng gắt tới mức nhiều người chơi rơi rụng vì không theo kịp."
+},
+{
+    term: "Discovery Layer",
+    definition: "Lớp nội dung hoặc mechanic mà người chơi chỉ nhận ra sau khi đã chơi đủ lâu hoặc quan sát đủ sâu."
+},
+{
+    term: "Hidden Depth",
+    definition: "Chiều sâu không phô trương ngay từ đầu nhưng dần lộ ra khi người chơi đầu tư thời gian và kỹ năng."
+},
+{
+    term: "Surface Appeal",
+    definition: "Sức hút ở lớp nhìn đầu tiên như hình ảnh, premise, motion, immediate feedback hoặc control dễ vào."
+},
+{
+    term: "Depth Curve",
+    definition: "Cách chiều sâu của game mở ra dần theo thời gian thay vì đập toàn bộ vào mặt người chơi từ phút đầu."
+},
+{
+    term: "Clarity under Load",
+    definition: "Khả năng game vẫn giữ rõ ràng khi màn hình đông đúc, hiệu ứng dày và áp lực cao."
+},
+{
+    term: "Compression Test",
+    definition: "Bài kiểm tra xem hệ thống có còn ổn khi nhét nhiều tác nhân cùng lúc vào một không gian hoặc thời điểm."
+},
+{
+    term: "Extensibility",
+    definition: "Khả năng một hệ thống được thiết kế từ đầu để sau này cắm thêm mechanic, content hoặc rule mới mà không phải đập đi xây lại."
+},
+{
+    term: "Design Robustness",
+    definition: "Mức độ một hệ thống còn giữ được chất lượng khi bị người chơi thử đủ kiểu, khi content tăng và khi meta tiến hóa."
+},
+{
+    term: "System Fragility",
+    definition: "Mức độ một hệ thống dễ gãy, dễ bị exploit hoặc dễ mất cân bằng khi có thay đổi nhỏ."
+},
+{
+    term: "Golden Path",
+    definition: "Lộ trình lý tưởng mà designer mong phần lớn người chơi sẽ đi qua để hiểu game đúng và thấy vui nhất."
+},
+{
+    term: "Critical Path",
+    definition: "Đường tiến trình tối thiểu cần hoàn thành để đi tới mục tiêu chính của game hoặc một mốc nội dung."
+},
+{
+    term: "Off-Path Rewarding",
+    definition: "Thiết kế thưởng cho người chơi lệch khỏi đường chính bằng bí mật, lore, tài nguyên hoặc shortcut."
+},
+{
+    term: "Spatial Storytelling",
+    definition: "Kể chuyện thông qua sắp xếp không gian, tuyến đường, tầm nhìn và quan hệ giữa các khu vực."
+},
+{
+    term: "Encounter Read",
+    definition: "Khoảnh khắc người chơi quan sát một tình huống và hiểu nhanh mối đe dọa, cơ hội và hướng tiếp cận."
+},
+{
+    term: "Encounter Solve",
+    definition: "Cách người chơi thực thi lời giải cho một encounter sau khi đã đọc được bài toán của nó."
+},
+{
+    term: "Encounter Replay Variance",
+    definition: "Mức độ cùng một encounter vẫn cho ra trải nghiệm khác nhau ở các lần chơi lại."
+},
+{
+    term: "Authored Challenge",
+    definition: "Thử thách được dàn dựng thủ công để kiểm tra rất cụ thể một kỹ năng, insight hoặc cảm xúc."
+},
+{
+    term: "Systemic Challenge",
+    definition: "Thử thách nảy sinh từ va chạm giữa các hệ thống chung, ít phụ thuộc script riêng từng màn."
+},
+{
+    term: "Friction as Feature",
+    definition: "Khi sự khó chịu nhỏ có chủ đích được giữ lại để tạo căng thẳng, nhập vai hoặc chiều sâu thay vì bị xóa sạch."
+},
+{
+    term: "Elegance",
+    definition: "Mức độ game đạt được chiều sâu lớn bằng số luật ít, rõ và liên kết đẹp."
+},
+{
+    term: "Designerly Economy",
+    definition: "Khả năng dùng ít công cụ, ít luật, ít content hơn nhưng khai thác ra nhiều trải nghiệm hơn."
+},
+{
+    term: "Player Authorship",
+    definition: "Mức độ người chơi cảm thấy câu chuyện, cách chơi hoặc chiến thắng là do chính họ tạo ra chứ không phải game dắt tay hoàn toàn."
+},
+{
+    term: "Expressive Play",
+    definition: "Lối chơi cho phép người chơi bộc lộ cá tính, gu chiến thuật hoặc phong cách riêng thông qua hệ thống."
+},
+{
+    term: "Aspirational Content",
+    definition: "Nội dung mà nhiều người chơi chưa chạm tới ngay nhưng nhìn vào là muốn luyện để chinh phục."
+},
+{
+    term: "Mastery Payoff",
+    definition: "Phần thưởng cảm xúc và hiệu quả hệ thống mà người chơi nhận được khi thật sự hiểu sâu và làm chủ game."
+},
+{
+    term: "Lasting Depth",
+    definition: "Chiều sâu còn đứng vững sau hàng chục giờ, hàng trăm giờ và sau cả khi cộng đồng đã tối ưu rất nhiều."
 }
 ];
 // Sắp xếp theo tên thuật ngữ (A-Z)
