@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Game Design Lexicon | Epic Style Glossary</title>
+    <!-- Google Fonts & Font Awesome 6 (Epic style typography) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #0a0c10;
+            background-image: radial-gradient(circle at 25% 40%, rgba(0, 120, 255, 0.08) 0%, rgba(0, 0, 0, 0) 50%),
+                              repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.02) 0px, rgba(255, 255, 255, 0.02) 2px, transparent 2px, transparent 8px);
+            font-family: 'Inter', sans-serif;
+            color: #eef2ff;
+            line-height: 1.4;
+            scroll-behavior: smooth;
+        }
+
+        /* Epic Games style container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem 2rem 4rem;
+        }
+
+        /* Header area */
+        .hero-section {
+            margin-bottom: 3rem;
+            position: relative;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            padding-bottom: 2rem;
+        }
+
+        .brand {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, #00a6ff, #6a0dad);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            filter: drop-shadow(0 0 6px rgba(0, 166, 255, 0.4));
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            background: linear-gradient(to right, #ffffff, #b0c4ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .badge {
+            background: rgba(0, 120, 255, 0.2);
+            backdrop-filter: blur(4px);
+            border-radius: 40px;
+            padding: 0.3rem 1rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            border: 1px solid rgba(0, 150, 255, 0.5);
+            color: #8bb9fe;
+        }
+
+        .subhead {
+            font-size: 1rem;
+            color: #a0b3d9;
+            max-width: 650px;
+            margin-top: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .subhead i {
+            color: #2e8bff;
+        }
+
+        /* Search + filter bar */
+        .toolbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 2rem 0 1.5rem;
+        }
+
+        .search-wrapper {
+            flex: 2;
+            min-width: 220px;
+            position: relative;
+        }
+
+        .search-wrapper i {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #6c86a3;
+            font-size: 1rem;
+        }
+
+        #searchInput {
+            width: 100%;
+            background: #14181f;
+            border: 1px solid #2a3340;
+            border-radius: 60px;
+            padding: 0.9rem 1rem 0.9rem 2.8rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            color: white;
+            transition: all 0.2s ease;
+            font-weight: 500;
+        }
+
+        #searchInput:focus {
+            outline: none;
+            border-color: #2e8bff;
+            box-shadow: 0 0 0 3px rgba(46, 139, 255, 0.3);
+            background: #0c1117;
+        }
+
+        .result-count {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(4px);
+            padding: 0.5rem 1.2rem;
+            border-radius: 60px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border: 1px solid rgba(255,255,255,0.1);
+            letter-spacing: 0.3px;
+        }
+
+        /* Grid cards inspired by Epic Games store */
+        .terms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 28px;
+            margin-top: 24px;
+        }
+
+        .term-card {
+            background: rgba(20, 24, 31, 0.7);
+            backdrop-filter: blur(2px);
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 1.8rem 1rem 1.8rem 1rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.25s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .term-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #0078f2, #a855f7, #0078f2);
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        .term-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(46, 139, 255, 0.5);
+            background: rgba(28, 34, 44, 0.9);
+            box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(0, 120, 255, 0.3);
+        }
+
+        .term-card:hover::before {
+            opacity: 1;
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(145deg, #c0d4ff, #5e9eff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .term-name {
+            font-size: 1.45rem;
+            font-weight: 700;
+            letter-spacing: -0.2px;
+            margin-bottom: 12px;
+            background: linear-gradient(to bottom, #ffffff, #cfdfef);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .click-hint {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: #5f7f9e;
+            margin-top: 12px;
+            display: inline-block;
+            letter-spacing: 0.8px;
+            border-top: 1px dashed rgba(255,255,255,0.15);
+            padding-top: 12px;
+            width: 80%;
+        }
+
+        /* No results */
+        .no-results {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 2rem;
+            grid-column: 1 / -1;
+            font-size: 1.2rem;
+            color: #8aa0c0;
+        }
+
+        /* MODAL (Epic style popup) */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(8px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0.2s, opacity 0.25s ease;
+        }
+
+        .modal-overlay.active {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .modal-container {
+            background: #11161e;
+            border-radius: 32px;
+            max-width: 550px;
+            width: 90%;
+            border: 1px solid rgba(0, 150, 255, 0.5);
+            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(0, 120, 255, 0.2);
+            transform: scale(0.96);
+            transition: transform 0.2s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            overflow: hidden;
+        }
+
+        .modal-overlay.active .modal-container {
+            transform: scale(1);
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 1.8rem;
+            background: rgba(0, 0, 0, 0.3);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .modal-header h3 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #FFF, #78b9ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: -0.3px;
+        }
+
+        .close-modal {
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: #a0b3d9;
+            transition: color 0.2s;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 60px;
+        }
+
+        .close-modal:hover {
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .modal-body {
+            padding: 2rem 1.8rem 2.2rem;
+            font-size: 1.05rem;
+            line-height: 1.55;
+            color: #d2e0ff;
+        }
+
+        .definition-text {
+            font-weight: 400;
+            letter-spacing: 0.2px;
+        }
+
+        .modal-footer {
+            padding: 1rem 1.8rem 1.8rem;
+            font-size: 0.75rem;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            color: #5f7f9e;
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .modal-footer i {
+            font-size: 0.8rem;
+        }
+
+        /* footer */
+        .page-footer {
+            margin-top: 5rem;
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 0.8rem;
+            color: #5f7393;
+        }
+
+        /* responsive */
+        @media (max-width: 720px) {
+            .container {
+                padding: 1.2rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            .terms-grid {
+                gap: 18px;
+            }
+            .term-card {
+                padding: 1.2rem 0.8rem;
+            }
+            .term-name {
+                font-size: 1.2rem;
+            }
+            .modal-header h3 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="hero-section">
+        <div class="brand">
+            <div class="logo-area">
+                <i class="fas fa-gamepad logo-icon"></i>
+                <h1>GAME DESIGN LEXICON</h1>
+            </div>
+            <div class="badge"><i class="fas fa-crown"></i> EPIC STYLE GLOSSARY</div>
+        </div>
+        <div class="subhead">
+            <i class="fas fa-brain"></i> <span>Thuật ngữ thiết kế game chuyên sâu — Click vào bất kỳ thẻ nào để xem định nghĩa chi tiết</span>
+        </div>
+    </div>
+
+    <div class="toolbar">
+        <div class="search-wrapper">
+            <i class="fas fa-search"></i>
+            <input type="text" id="searchInput" placeholder="Tìm kiếm thuật ngữ... (Game Mechanics, Level Design, NPC...)" autocomplete="off">
+        </div>
+        <div class="result-count" id="resultCount">Đang tải...</div>
+    </div>
+
+    <div id="termsGrid" class="terms-grid">
+        <!-- dynamic cards will appear here -->
+        <div class="no-results" style="display: none;">Không tìm thấy thuật ngữ phù hợp</div>
+    </div>
+
+    <div class="page-footer">
+        <i class="fas fa-dice-d6"></i>  Bộ từ điển Game Designer • Lấy cảm hứng từ phong cách Epic Games • Nhấn vào thẻ để khám phá
+    </div>
+</div>
+
+<!-- Modal structure -->
+<div id="termModal" class="modal-overlay">
+    <div class="modal-container">
+        <div class="modal-header">
+            <h3 id="modalTermTitle">Game Mechanics</h3>
+            <button class="close-modal" id="closeModalBtn"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="modal-body">
+            <p id="modalDefinition" class="definition-text">Định nghĩa chi tiết sẽ hiển thị ở đây.</p>
+        </div>
+        <div class="modal-footer">
+            <i class="fas fa-info-circle"></i> Thuật ngữ game design chuyên ngành
+        </div>
+    </div>
+</div>
+
+<script>
+    // ---------- DANH SÁCH THUẬT NGỮ GAME DESIGNER (ĐẦY ĐỦ + ĐỊNH NGHĨA CHI TIẾT) ----------
+    const glossaryData = [
+        {
+            term: "Game Mechanics",
+            definition: "Cơ chế trò chơi là tập hợp các quy tắc, hệ thống và tương tác cốt lõi xác định cách người chơi hành động và thế giới phản hồi. Bao gồm nhảy, chiến đấu, thu thập tài nguyên, hệ thống nhiệm vụ — nền tảng cho mọi trải nghiệm gameplay."
+        },
+        {
+            term: "Level Design",
+            definition: "Thiết kế màn chơi tập trung vào việc xây dựng không gian, bố cục, nhịp độ thử thách và dẫn dắt người chơi. Level Design ảnh hưởng trực tiếp đến cảm xúc, sự khám phá và tính tái chơi."
+        },
+        {
+            term: "NPC (Non-Player Character)",
+            definition: "Nhân vật không do người chơi điều khiển, được lập trình bởi AI để cung cấp cốt truyện, nhiệm vụ, đối thoại hoặc tạo thử thách. NPC làm sống động thế giới game và thúc đẩy mạch truyện."
+        },
+        {
+            term: "Loot Box",
+            definition: "Cơ chế kiếm tiền dưới dạng hộp phần thưởng ngẫu nhiên, chứa vật phẩm mỹ phẩm hoặc tăng sức mạnh. Gây tranh cãi vì tính may rủi, nhưng được nhiều game AAA sử dụng để duy trì doanh thu."
+        },
+        {
+            term: "RPG Elements",
+            definition: "Yếu tố nhập vai như hệ thống chỉ số (stats), cây kỹ năng, trang bị, và lựa chọn phân nhánh cốt truyện. Giúp người chơi phát triển nhân vật và gia tăng chiều sâu chiến thuật."
+        },
+        {
+            term: "Sandbox",
+            definition: "Thiết kế thế giới mở, trao quyền tự do sáng tạo cho người chơi mà không áp đặt mục tiêu tuyến tính. Minecraft, GTA là ví dụ điển hình: người chơi tự tạo ra trải nghiệm riêng."
+        },
+        {
+            term: "Procedural Generation",
+            definition: "Sinh nội dung (bản đồ, nhiệm vụ, item) theo thuật toán ngẫu nhiên thay vì làm thủ công. Tăng tính tái chơi và giảm khối lượng sản xuất, thường thấy trong roguelike và game khám phá."
+        },
+        {
+            term: "Player Agency",
+            definition: "Mức độ ảnh hưởng thực sự mà người chơi có thể tác động lên thế giới game, cốt truyện hoặc kết cục. Agency cao tạo cảm giác ý nghĩa và cá nhân hóa hành trình."
+        },
+        {
+            term: "Emergent Gameplay",
+            definition: "Tình huống gameplay phát sinh bất ngờ từ sự tương tác giữa các cơ chế đơn giản. Ví dụ: combo kỹ năng không được lập trình sẵn hoặc chiến thuật sáng tạo từ người chơi."
+        },
+        {
+            term: "Game Loop",
+            definition: "Vòng lặp cốt lõi lặp đi lặp lại trong suốt quá trình chơi: hành động → phản hồi → tiến triển. Thiết kế game loop hấp dẫn là yếu tố then chốt giữ chân người chơi."
+        },
+        {
+            term: "Balancing",
+            definition: "Quá trình điều chỉnh chỉ số nhân vật, vũ khí, kẻ địch để đảm bảo công bằng, thử thách vừa phải, tránh chiến thuật quá mạnh (overpowered) tạo cảm giác nhàm chán hoặc bất công."
+        },
+        {
+            term: "Diegetic UI",
+            definition: "Giao diện người dùng được tích hợp trực tiếp vào không gian game (ví dụ: màn hình hiển thị trên tay nhân vật, bản đồ trong game). Tăng tính nhập vai và giảm phá vỡ bầu không khí."
+        },
+        {
+            term: "PvE / PvP",
+            definition: "PvE (Player vs Environment): người chơi chống lại hệ thống game, quái vật. PvP (Player vs Player): đấu giữa người với người. Hai phương thức định hình lối chơi và cộng đồng."
+        },
+        {
+            term: "Ragdoll Physics",
+            definition: "Mô phỏng vật lý cho cơ thể nhân vật khi chết hoặc bị ngã, tạo hiệu ứng chân thực, hài hước hoặc kịch tính. Góp phần tăng tính thị giác và cảm xúc trong game hành động."
+        },
+        {
+            term: "Metagame",
+            definition: "'Trò chơi bên ngoài trò chơi' – chiến thuật, meta xoay quanh lựa chọn tối ưu dựa trên cộng đồng, bảng xếp hạng hoặc cân bằng phiên bản. Ảnh hưởng lớn đến game competitive."
+        }
+    ];
+
+    // DOM elements
+    const gridContainer = document.getElementById('termsGrid');
+    const searchInput = document.getElementById('searchInput');
+    const resultCountSpan = document.getElementById('resultCount');
+    const modalOverlay = document.getElementById('termModal');
+    const modalTitle = document.getElementById('modalTermTitle');
+    const modalDefinitionPara = document.getElementById('modalDefinition');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+
+    // Helper: render cards dựa trên từ khóa tìm kiếm
+    function renderTerms(filterKeyword = '') {
+        const keywordLower = filterKeyword.trim().toLowerCase();
+        let filteredTerms = [...glossaryData];
+        
+        if (keywordLower !== '') {
+            filteredTerms = glossaryData.filter(item => 
+                item.term.toLowerCase().includes(keywordLower) || 
+                item.definition.toLowerCase().includes(keywordLower)
+            );
+        }
+        
+        // Cập nhật số lượng
+        const total = filteredTerms.length;
+        resultCountSpan.innerHTML = `<i class="fas fa-layer-group"></i> ${total} thuật ngữ`;
+        
+        if (filteredTerms.length === 0) {
+            gridContainer.innerHTML = `<div class="no-results">
+                <i class="fas fa-skull" style="font-size: 2rem; opacity: 0.6;"></i>
+                <p style="margin-top: 1rem;">Không tìm thấy thuật ngữ "${escapeHtml(filterKeyword)}"</p>
+                <p style="font-size: 0.8rem;">Hãy thử từ khóa khác như Mechanics, Level Design, NPC...</p>
+            </div>`;
+            return;
+        }
+        
+        // Tạo grid với hiệu ứng Epic Store card
+        let cardsHTML = '';
+        for (let i = 0; i < filteredTerms.length; i++) {
+            const termObj = filteredTerms[i];
+            // tạo icon động dựa theo index để tăng tính thẩm mỹ
+            const iconClass = getRandomEpicIcon(i);
+            cardsHTML += `
+                <div class="term-card" data-term-name="${escapeHtml(termObj.term)}">
+                    <div class="card-icon"><i class="${iconClass}"></i></div>
+                    <div class="term-name">${escapeHtml(termObj.term)}</div>
+                    <div class="click-hint"><i class="fas fa-mouse-pointer"></i> BẤM ĐỂ XEM CHI TIẾT</div>
+                </div>
+            `;
+        }
+        gridContainer.innerHTML = cardsHTML;
+    }
+    
+    // hàm nhỏ để random icon theo phong cách game (giống Epic Store card)
+    function getRandomEpicIcon(index) {
+        const icons = [
+            'fas fa-cogs', 'fas fa-map', 'fas fa-robot', 'fas fa-cube', 
+            'fas fa-dragon', 'fas fa-dice-d6', 'fas fa-code-branch', 'fas fa-users',
+            'fas fa-hand-peace', 'fas fa-gamepad', 'fas fa-chess-queen', 'fas fa-skull',
+            'fas fa-shield-alt', 'fas fa-meteor', 'fas fa-hat-wizard'
+        ];
+        return icons[index % icons.length];
+    }
+    
+    // helper escape html
+    function escapeHtml(str) {
+        if (!str) return '';
+        return str.replace(/[&<>]/g, function(m) {
+            if (m === '&') return '&amp;';
+            if (m === '<') return '&lt;';
+            if (m === '>') return '&gt;';
+            return m;
+        }).replace(/[\uD800-\uDBFF][\uDC00-\uDFFF]/g, function(c) {
+            return c;
+        });
+    }
+    
+    // Mở modal với thông tin thuật ngữ (tìm từ danh sách gốc)
+    function openModal(termName) {
+        // tìm object term trong glossaryData gốc
+        const foundTerm = glossaryData.find(item => item.term === termName);
+        if (foundTerm) {
+            modalTitle.innerText = foundTerm.term;
+            modalDefinitionPara.innerText = foundTerm.definition;
+        } else {
+            modalTitle.innerText = termName;
+            modalDefinitionPara.innerText = 'Định nghĩa chi tiết hiện đang được cập nhật. Hãy khám phá thêm thuật ngữ khác!';
+        }
+        modalOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';  // chặn scroll nền
+    }
+    
+    function closeModal() {
+        modalOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+    
+    // Xử lý click trên grid (event delegation)
+    function handleCardClick(e) {
+        let targetEl = e.target;
+        // tìm phần tử .term-card gần nhất
+        const card = targetEl.closest('.term-card');
+        if (!card) return;
+        const termAttr = card.getAttribute('data-term-name');
+        if (termAttr) {
+            openModal(termAttr);
+        }
+    }
+    
+    // Filter search input
+    function onSearchInput() {
+        const keyword = searchInput.value;
+        renderTerms(keyword);
+    }
+    
+    // Đóng modal bằng ESC
+    function handleEscKey(e) {
+        if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
+            closeModal();
+        }
+    }
+    
+    // Đóng modal khi click vào overlay (nền mờ)
+    function handleOverlayClick(e) {
+        if (e.target === modalOverlay) {
+            closeModal();
+        }
+    }
+    
+    // Thêm sự kiện
+    function bindEvents() {
+        searchInput.addEventListener('input', onSearchInput);
+        gridContainer.addEventListener('click', handleCardClick);
+        closeModalBtn.addEventListener('click', closeModal);
+        modalOverlay.addEventListener('click', handleOverlayClick);
+        window.addEventListener('keydown', handleEscKey);
+    }
+    
+    // Init mặc định
+    function init() {
+        renderTerms('');
+        bindEvents();
+    }
+    
+    // start app
+    init();
+</script>
+</body>
+</html>
