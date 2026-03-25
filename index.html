@@ -34,6 +34,9 @@
                 <input type="text" id="searchInput" placeholder="Tìm kiếm thuật ngữ... (Game Mechanics, Level Design, NPC...)" autocomplete="off">
             </div>
             <div class="result-count" id="resultCount">Đang tải...</div>
+            <button id="quizBtn" class="quiz-trigger">
+                <i class="fas fa-gamepad"></i> THỬ THÁCH TRẮC NGHIỆM
+            </button>
         </div>
 
         <div id="termsGrid" class="terms-grid">
@@ -45,7 +48,7 @@
         </div>
     </div>
 
-    <!-- Modal -->
+    <!-- Modal Glossary -->
     <div id="termModal" class="modal-overlay">
         <div class="modal-container">
             <div class="modal-header">
@@ -63,8 +66,29 @@
         </div>
     </div>
 
+    <!-- Quiz Modal -->
+    <div id="quizModal" class="modal-overlay">
+        <div class="modal-container" style="max-width: 600px;">
+            <div class="modal-header">
+                <h3><i class="fas fa-question-circle"></i> TRẮC NGHIỆM THUẬT NGỮ</h3>
+                <button class="close-modal" id="closeQuizBtn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p id="quizDefinition" style="font-size: 1.2rem; font-weight: 500; margin-bottom: 1.5rem; line-height: 1.5;">
+                    Định nghĩa sẽ hiển thị ở đây...
+                </p>
+                <div id="quizOptions" class="quiz-options"></div>
+                <div id="quizFeedback" class="quiz-feedback"></div>
+                <button id="nextQuizBtn" class="next-quiz-btn">
+                    CÂU HỎI TIẾP THEO <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- File JS riêng -->
     <script src="script.js"></script>
 </body>
 </html>
-
