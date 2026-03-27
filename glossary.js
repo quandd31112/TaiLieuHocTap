@@ -1,4 +1,6 @@
-// ---------- DANH SÁCH THUẬT NGỮ GAME DESIGNER ----------
+// ==================== GLOSSARY MODULE ====================
+// Lưu ý: Bạn cần copy mảng glossaryData đầy đủ vào đầu file này trước khi sử dụng.
+// const glossaryData = [ ... ]; // toàn bộ dữ liệu thuật ngữ (tự copy từ file cũ)
 const glossaryData = [
     {
         term: "Game Mechanics",
@@ -1699,154 +1701,935 @@ const glossaryData = [
 {
     term: "Lasting Depth",
     definition: "Chiều sâu còn đứng vững sau hàng chục giờ, hàng trăm giờ và sau cả khi cộng đồng đã tối ưu rất nhiều."
+},
+{
+    term: "System Ownership",
+    definition: "Mức độ một hệ thống tự chịu trách nhiệm tạo ra giá trị gameplay của chính nó thay vì phải dựa quá nhiều vào hệ khác để cứu."
+},
+{
+    term: "System Identity",
+    definition: "Bản sắc riêng khiến một hệ thống được nhận ra ngay qua cách nó tạo quyết định, cảm xúc và nhịp chơi."
+},
+{
+    term: "Mechanic Identity",
+    definition: "Điểm làm một mechanic khác biệt và đáng tồn tại thay vì chỉ là bản reskin của mechanic khác."
+},
+{
+    term: "Feature Justification",
+    definition: "Lý do tồn tại thật sự của một feature trong sản phẩm. Không chứng minh được nó phục vụ pillar, fantasy hoặc KPI nào thì nên cắt."
+},
+{
+    term: "Design Redundancy",
+    definition: "Khi nhiều feature khác nhau lại đang giải cùng một vấn đề theo cách gần như giống nhau, làm game phình và nhạt."
+},
+{
+    term: "Feature Cannibalization",
+    definition: "Khi một feature mới ăn mất giá trị, thời gian chơi hoặc động lực của feature cũ."
+},
+{
+    term: "Value Competition",
+    definition: "Sự cạnh tranh giữa các hoạt động trong game để giành thời gian, tài nguyên và sự chú ý của người chơi."
+},
+{
+    term: "Choice Compression",
+    definition: "Hiện tượng nhiều lựa chọn nhìn thì nhiều nhưng bị co lại thành một vài lựa chọn thật sự khả thi."
+},
+{
+    term: "Option Paralysis",
+    definition: "Trạng thái người chơi bị ngợp vì quá nhiều lựa chọn mà thiếu tín hiệu để quyết định."
+},
+{
+    term: "Decision Fatigue",
+    definition: "Sự mệt mỏi khi game bắt người chơi ra quá nhiều quyết định liên tục mà không có nhịp nghỉ hoặc ưu tiên rõ."
+},
+{
+    term: "System Overhead",
+    definition: "Chi phí nhận thức và thao tác mà người chơi phải gánh chỉ để tương tác với hệ thống trước khi thấy vui."
+},
+{
+    term: "Interface Tax",
+    definition: "Phần đau khổ do UI hoặc flow tệ gây ra, khiến việc làm một hành động đơn giản trở nên phiền và chậm."
+},
+{
+    term: "Interaction Cost",
+    definition: "Cái giá nhỏ về click, input, thời gian hoặc chú ý mà người chơi phải trả để thực hiện một hành động."
+},
+{
+    term: "Action Friction",
+    definition: "Ma sát trong thao tác. Có lúc cần giảm để mượt, có lúc phải giữ để tạo trọng lượng quyết định."
+},
+{
+    term: "Intent Clarity",
+    definition: "Mức độ game hiểu đúng ý định của người chơi từ input và biến nó thành hành động họ mong đợi."
+},
+{
+    term: "Action Readiness",
+    definition: "Mức độ mà một hành động luôn sẵn sàng và dễ truy cập đúng lúc người chơi cần."
+},
+{
+    term: "Mechanical Honesty",
+    definition: "Sự nhất quán giữa thứ game thể hiện và thứ game thật sự tính toán bên dưới. Lệch nhau thì người chơi mất niềm tin."
+},
+{
+    term: "Simulation Depth",
+    definition: "Độ sâu đến từ việc hệ thống mô phỏng thế giới hoặc đối tượng theo logic nội tại thay vì script cứng."
+},
+{
+    term: "Abstraction Layer",
+    definition: "Tầng giản lược dùng để biến một hiện tượng phức tạp thành luật chơi dễ hiểu và dễ thao tác hơn."
+},
+{
+    term: "Representational Fidelity",
+    definition: "Mức độ hệ thống thể hiện đúng hoặc gần đúng với thứ nó đang mô phỏng hay hứa hẹn."
+},
+{
+    term: "Designer Intent Leakage",
+    definition: "Khi người chơi nhìn xuyên qua trải nghiệm và thấy quá rõ bàn tay dàn dựng của designer, làm mất nhập vai hoặc agency."
+},
+{
+    term: "Invisible Hand Design",
+    definition: "Kiểu thiết kế dắt người chơi rất mạnh nhưng khiến họ cảm thấy mọi thứ là lựa chọn tự nhiên của chính mình."
+},
+{
+    term: "Agency Preservation",
+    definition: "Kỹ thuật giữ cảm giác chủ động của người chơi ngay cả khi game cần giới hạn, sửa hướng hoặc bảo vệ pacing."
+},
+{
+    term: "Soft Correction",
+    definition: "Cách game âm thầm chỉnh người chơi về hướng an toàn hoặc đúng flow mà không phạt thẳng mặt."
+},
+{
+    term: "Hard Correction",
+    definition: "Cách game ép người chơi quay về quỹ đạo bằng rào cản trực tiếp như khóa cửa, reset vị trí hoặc thất bại."
+},
+{
+    term: "Failure Recovery Design",
+    definition: "Thiết kế toàn bộ hành trình sau thất bại, từ thời gian load, khoảng cách quay lại, thông tin học được đến động lực thử tiếp."
+},
+{
+    term: "Retry Friction",
+    definition: "Mức độ đau đớn giữa hai lần thử, bao gồm chờ, load, di chuyển lại, xem lại cutscene hoặc thao tác thừa."
+},
+{
+    term: "Attempt Velocity",
+    definition: "Tốc độ mà người chơi có thể bước vào lần thử tiếp theo sau khi thất bại. Cao thì học nhanh, thấp thì nản."
+},
+{
+    term: "Learning Velocity",
+    definition: "Tốc độ mà người chơi rút ra bài học hữu ích từ mỗi lần chơi, mỗi lần chết hoặc mỗi quyết định sai."
+},
+{
+    term: "Feedback Resolution",
+    definition: "Độ chi tiết của phản hồi mà game đưa ra, cho biết chính xác sai ở đâu hay chỉ nói chung chung là thua."
+},
+{
+    term: "Punishment Severity",
+    definition: "Độ nặng của hình phạt sau sai lầm. Phạt nặng không xấu, nhưng phải đi kèm clarity và lý do rõ."
+},
+{
+    term: "Forgiveness Window",
+    definition: "Khoảng nương tay cho phép người chơi suýt sai nhưng vẫn sống hoặc vẫn cứu được tình thế."
+},
+{
+    term: "Buffer for Mastery",
+    definition: "Khoảng dễ chịu ban đầu để người chơi tập kỹ năng, trước khi game đòi hỏi thực thi nghiêm túc."
+},
+{
+    term: "Execution Ceiling",
+    definition: "Trần thể hiện nằm ở thao tác, timing và precision thay vì ở build hoặc chỉ số."
+},
+{
+    term: "Input Burden",
+    definition: "Khối lượng thao tác mà một hệ thống đòi hỏi trên tay người chơi để đạt hiệu quả mong muốn."
+},
+{
+    term: "Mechanical Tax",
+    definition: "Công sức thao tác thêm mà người chơi phải bỏ ra chỉ để duy trì trạng thái tối ưu cơ bản."
+},
+{
+    term: "Accessibility Debt",
+    definition: "Hậu quả lâu dài khi game phớt lờ nhu cầu tiếp cận từ đầu, khiến sau này vá cực tốn và cực xấu."
+},
+{
+    term: "Read Pressure",
+    definition: "Áp lực buộc người chơi phải đọc nhanh và đúng tín hiệu trong thời gian ngắn."
+},
+{
+    term: "Execution Pressure",
+    definition: "Áp lực ở khâu thao tác khi người chơi biết phải làm gì nhưng việc làm đúng lại khó."
+},
+{
+    term: "Planning Pressure",
+    definition: "Áp lực ở tầng chuẩn bị, build, route hoặc phân bổ tài nguyên trước khi bước vào thử thách."
+},
+{
+    term: "Adaptation Pressure",
+    definition: "Áp lực buộc người chơi thay đổi chiến thuật liên tục thay vì spam một lời giải."
+},
+{
+    term: "Tempo Break",
+    definition: "Khoảnh khắc nhịp game bị bẻ gãy có chủ đích để reset cảm xúc, gây bất ngờ hoặc đổi mode tư duy."
+},
+{
+    term: "Flow Interruption",
+    definition: "Sự ngắt mạch trải nghiệm của người chơi do popup, loading, tutorial, UI hoặc một hệ thống chen vào không đúng lúc."
+},
+{
+    term: "Pacing Debt",
+    definition: "Sự tích tụ của những đoạn lê thê, ngắt mạch hoặc dồn dập quá mức khiến nhịp game bị méo về dài hạn."
+},
+{
+    term: "Encounter Rhythm",
+    definition: "Nhịp điệu bên trong một encounter, gồm lúc thăm dò, lúc áp lực tăng, lúc mở cửa phản công và lúc kết liễu."
+},
+{
+    term: "Combat Cadence",
+    definition: "Tần suất và nhịp luân chuyển giữa tấn công, né, hồi, reposition, dùng skill và tận dụng sơ hở."
+},
+{
+    term: "Pressure Relief",
+    definition: "Khoảnh khắc hệ thống giảm nhẹ áp lực để người chơi thở, đọc lại tình hình và tái lập kiểm soát."
+},
+{
+    term: "Threat Layering",
+    definition: "Chồng nhiều loại đe dọa khác nhau trong cùng một tình huống để tăng độ sâu đọc tình huống."
+},
+{
+    term: "Threat Prioritization",
+    definition: "Bài toán người chơi phải quyết định mối đe dọa nào cần xử lý trước trong một biển nguy hiểm."
+},
+{
+    term: "Threat Saturation",
+    definition: "Khi số lượng hoặc cường độ mối đe dọa vượt ngưỡng đọc hiểu, làm encounter vỡ và thành hỗn loạn vô nghĩa."
+},
+{
+    term: "Encounter Decomposition",
+    definition: "Cách tách một tình huống phức tạp thành các thành phần nhỏ để phân tích, test và chỉnh balance."
+},
+{
+    term: "Solve Space",
+    definition: "Số lượng hướng giải khả thi mà người chơi có thể dùng để vượt qua một bài toán gameplay."
+},
+{
+    term: "Single-Solution Bias",
+    definition: "Xu hướng thiết kế hoặc vô tình làm cho một encounter chỉ còn một cách giải thực tế."
+},
+{
+    term: "Approach Diversity",
+    definition: "Mức độ game cho phép người chơi tiếp cận cùng một tình huống bằng nhiều phong cách khác nhau."
+},
+{
+    term: "Tactical Readability",
+    definition: "Khả năng người chơi nắm được nhanh các yếu tố có ảnh hưởng ngắn hạn như cover, range, cooldown, aggro, flank."
+},
+{
+    term: "Strategic Readability",
+    definition: "Khả năng nhìn ra các hậu quả dài hạn như route, kinh tế, build path, objective timing hoặc power spike."
+},
+{
+    term: "Burst Window",
+    definition: "Khoảng thời gian ngắn mà dồn tài nguyên hoặc damage cho hiệu quả vượt trội."
+},
+{
+    term: "Vulnerability Window",
+    definition: "Khoảng thời gian mục tiêu hoặc boss lộ sơ hở rõ ràng và nên bị trừng phạt."
+},
+{
+    term: "Commitment Window",
+    definition: "Khoảng thời gian một hành động đã vào guồng và không thể dễ dàng rút ra."
+},
+{
+    term: "Risk Window",
+    definition: "Khoảng thời gian người chơi đang phơi mình trước rủi ro nếu đọc sai hoặc thực thi sai."
+},
+{
+    term: "Skill Transfer",
+    definition: "Mức độ kiến thức hoặc kỹ năng học được ở tình huống này có thể áp dụng sang tình huống khác."
+},
+{
+    term: "Cross-System Learning",
+    definition: "Khi bài học từ một hệ thống giúp người chơi hiểu hoặc chơi tốt hơn ở hệ thống khác."
+},
+{
+    term: "Systemic Onboarding",
+    definition: "Dạy người chơi thông qua chính việc tương tác với hệ thống, không tách thành lớp hướng dẫn khô cứng."
+},
+{
+    term: "Delayed Reveal",
+    definition: "Kỹ thuật chưa lộ hết chiều sâu của một mechanic ngay mà để người chơi từ từ khám phá thêm tầng mới."
+},
+{
+    term: "Mastery Ladder",
+    definition: "Chuỗi nấc tiến bộ rõ ràng từ hiểu cơ bản đến sử dụng nâng cao, tối ưu và sáng tạo."
+},
+{
+    term: "Skill Signposting",
+    definition: "Cách game cho người chơi thấy rằng vẫn còn thứ để học, để tối ưu, để trở nên giỏi hơn."
+},
+{
+    term: "Expression Surface",
+    definition: "Số lượng điểm mà game cho phép người chơi bộc lộ phong cách cá nhân, kỹ năng hoặc tư duy riêng."
+},
+{
+    term: "Stylistic Viability",
+    definition: "Mức độ một phong cách chơi khác meta vẫn có thể hoàn thành nội dung mà không quá tự hành xác."
+},
+{
+    term: "Identity Budget",
+    definition: "Giới hạn số lượng điểm khác biệt thực sự mà một class, hero hoặc feature có thể mang trước khi vượt quá khả năng đọc hiểu."
+},
+{
+    term: "Roster Health",
+    definition: "Tình trạng tổng thể của một dàn tướng, class hoặc unit xét theo độ đa dạng, tính phân vai và mức độ chồng lấn."
+},
+{
+    term: "Role Compression",
+    definition: "Khi một đơn vị hoặc build làm quá nhiều vai trò cùng lúc, khiến những vai trò chuyên biệt khác mất chỗ sống."
+},
+{
+    term: "Role Clarity",
+    definition: "Mức độ mà người chơi hiểu một class, hero hoặc unit sinh ra để làm gì trong đội hình hoặc encounter."
+},
+{
+    term: "Role Redundancy",
+    definition: "Khi nhiều nhân vật hoặc công cụ cùng đảm nhận một vai trò theo cách quá giống nhau."
+},
+{
+    term: "Asymmetric Burden",
+    definition: "Mức độ khó khăn khác nhau mà các phía trong game bất đối xứng phải gánh để đạt cùng hiệu quả."
+},
+{
+    term: "Counter Burden",
+    definition: "Chi phí mà đối thủ phải bỏ ra để đối phó một chiến thuật hoặc công cụ mạnh."
+},
+{
+    term: "Counter Clarity",
+    definition: "Mức độ mà game cho người chơi hiểu rõ rằng một thứ có thể bị khắc chế bằng cách nào."
+},
+{
+    term: "Counter Availability",
+    definition: "Mức độ các công cụ phản khắc có thật sự hiện diện, tiếp cận được và hợp lý trong bối cảnh hiện tại."
+},
+{
+    term: "Soft Counter",
+    definition: "Cách khắc chế không vô hiệu hóa hoàn toàn nhưng làm giảm đáng kể hiệu quả của đối phương."
+},
+{
+    term: "Hard Counter",
+    definition: "Khắc chế gần như trực tiếp vô hiệu hóa hoặc bóp nghẹt một chiến thuật, hero hoặc build khác."
+},
+{
+    term: "Meta Polarization",
+    definition: "Khi meta bị chia mạnh thành vài cực đối đầu nhau, làm nhiều lựa chọn trung gian mất đất diễn."
+},
+{
+    term: "Rock-Paper-Scissors Balance",
+    definition: "Mô hình cân bằng dựa trên quan hệ khắc chế vòng tròn giữa các lựa chọn."
+},
+{
+    term: "Non-Transitive Balance",
+    definition: "Dạng cân bằng mà A thắng B, B thắng C nhưng C lại có thể thắng A, tạo ra hệ đối kháng vòng."
+},
+{
+    term: "Lopsided Matchup",
+    definition: "Kèo đấu có chênh lệch quá mạnh giữa hai lựa chọn, làm trải nghiệm bị méo."
+},
+{
+    term: "Skill Matchup",
+    definition: "Mối quan hệ giữa hai bộ công cụ xét trên khả năng thực thi và đọc nhau của người chơi trình độ cao."
+},
+{
+    term: "Economy Tension",
+    definition: "Mức độ nền kinh tế ép người chơi phải cân nhắc giữa tiêu ngay, giữ lại, đầu tư hoặc mạo hiểm."
+},
+{
+    term: "Currency Velocity",
+    definition: "Tốc độ một loại tiền được tạo ra, tiêu đi và quay vòng trong nền kinh tế game."
+},
+{
+    term: "Price Anchoring",
+    definition: "Kỹ thuật dùng một mức giá tham chiếu để làm những gói khác trông hợp lý hoặc hấp dẫn hơn."
+},
+{
+    term: "Perceived Value",
+    definition: "Giá trị mà người chơi cảm thấy mình nhận được, không nhất thiết trùng với giá trị thiết kế nội bộ."
+},
+{
+    term: "Economic Legibility",
+    definition: "Mức độ người chơi hiểu nguồn ra vào tài nguyên, chi phí cơ hội và quyết định đầu tư nào là hợp lý."
+},
+{
+    term: "Progression Inflation",
+    definition: "Khi sức mạnh hoặc phần thưởng leo thang quá nhanh, làm các mốc trước đó mất ý nghĩa."
+},
+{
+    term: "Reward Inflation",
+    definition: "Hiện tượng phải tăng quà ngày càng nhiều để giữ người chơi, khiến reward cũ trở nên vô vị."
+},
+{
+    term: "Reward Relevance",
+    definition: "Mức độ phần thưởng thật sự có ích, có ý nghĩa hoặc phù hợp với trạng thái hiện tại của người chơi."
+},
+{
+    term: "Reward Timing",
+    definition: "Thời điểm game trao phần thưởng. Đúng nhịp thì rất đã, sai nhịp thì nhạt hoặc phá flow."
+},
+{
+    term: "Reward Texture",
+    definition: "Cảm giác đa dạng trong cách phần thưởng được trao, nhìn, nghe và tác động đến hệ thống."
+},
+{
+    term: "Reward Anticipation",
+    definition: "Khoảng mong chờ trước khi nhận thưởng, cực quan trọng để làm phần thưởng cảm thấy có giá."
+},
+{
+    term: "Reward Exhaustion",
+    definition: "Tình trạng người chơi bị lì với phần thưởng vì nhận quá nhiều, quá đều hoặc quá dự đoán được."
+},
+{
+    term: "Collection Pressure",
+    definition: "Áp lực tâm lý buộc người chơi muốn sở hữu trọn bộ nhân vật, item, card hoặc cosmetic."
+},
+{
+    term: "Completion Pressure",
+    definition: "Áp lực phải làm cho hết map, hết nhiệm vụ, hết thành tựu hoặc hết event trước khi bỏ lỡ."
+},
+{
+    term: "Scarcity Design",
+    definition: "Thiết kế sự khan hiếm có chủ đích để tạo giá trị, căng thẳng hoặc quyết định đầu tư."
+},
+{
+    term: "Abundance Phase",
+    definition: "Giai đoạn game cho tài nguyên dồi dào để tạo cảm giác mạnh, dễ chịu hoặc giúp onboarding mượt."
+},
+{
+    term: "Resource Drought",
+    definition: "Giai đoạn khan hiếm tài nguyên tạo áp lực sinh tồn, buộc người chơi tối ưu và ra quyết định khó."
+},
+{
+    term: "Economy Compression",
+    definition: "Khi quá nhiều loại tài nguyên hoặc đường chi tiêu bị ép lại thành vài lựa chọn tối ưu duy nhất."
+},
+{
+    term: "Monetization Friction",
+    definition: "Mức độ phiền hoặc lộ liễu của điểm kiếm tiền. Làm ngu thì phản cảm, làm khéo thì người chơi thấy hợp lý."
+},
+{
+    term: "Ethical Monetization",
+    definition: "Cách kiếm tiền không dựa quá mạnh vào thao túng tâm lý tiêu cực, thiếu minh bạch hoặc bóp trải nghiệm cốt lõi."
+},
+{
+    term: "Conversion Intent",
+    definition: "Thời điểm và lý do khiến người chơi có khuynh hướng sẵn sàng trả tiền."
+},
+{
+    term: "Spending Motivation",
+    definition: "Động cơ đằng sau hành vi nạp như tiết kiệm thời gian, thể hiện bản thân, cạnh tranh, sưu tầm hoặc ủng hộ game."
+},
+{
+    term: "Prestige Signaling",
+    definition: "Cách game cho phép người chơi thể hiện đẳng cấp, độ hiếm hoặc thành tích trước người khác."
+},
+{
+    term: "Social Proof Loop",
+    definition: "Vòng lặp trong đó người chơi thấy người khác có skin, rank, build hoặc vật phẩm rồi nảy sinh mong muốn tương tự."
+},
+{
+    term: "Community Meta",
+    definition: "Meta hình thành không chỉ từ balance mà còn từ content creator, tier list, giải đấu và niềm tin cộng đồng."
+},
+{
+    term: "Perception Balance",
+    definition: "Cân bằng ở tầng cảm nhận của cộng đồng, đôi khi khác với cân bằng thật trong dữ liệu."
+},
+{
+    term: "Sentiment Risk",
+    definition: "Nguy cơ một quyết định design đúng về số liệu nhưng bị cộng đồng ghét vì cách nó được cảm nhận."
+},
+{
+    term: "Expectation Management",
+    definition: "Quản lý kỳ vọng cộng đồng về update, balance, roadmap và lời hứa sản phẩm."
+},
+{
+    term: "Patch Trust",
+    definition: "Mức độ cộng đồng tin rằng đội ngũ làm patch hiểu game và ra quyết định có lý."
+},
+{
+    term: "Live Service Burden",
+    definition: "Gánh nặng vận hành của game sống lâu dài, gồm content cadence, event cadence, balance, support và data analysis."
+},
+{
+    term: "Cadence Sustainability",
+    definition: "Khả năng duy trì nhịp ra content hoặc event trong thời gian dài mà team không chết."
+},
+{
+    term: "Content Burn Rate",
+    definition: "Tốc độ người chơi tiêu thụ hết nội dung mới sau mỗi bản cập nhật."
+},
+{
+    term: "Player Burnout",
+    definition: "Trạng thái kiệt sức vì game đòi hỏi quá nhiều quay lại, quá nhiều event hoặc quá nhiều việc phải làm."
+},
+{
+    term: "Obligation Loop",
+    definition: "Vòng lặp giữ chân người chơi bằng cảm giác phải làm, phải check-in, phải hoàn thành chứ không hẳn vì vui."
+},
+{
+    term: "Healthy Engagement",
+    definition: "Tương tác dài hạn dựa trên niềm vui, động lực nội tại và giá trị thực chứ không chỉ FOMO hoặc nhiệm vụ cưỡng ép."
+},
+{
+    term: "Design Sustainability",
+    definition: "Mức độ một hệ thống có thể tồn tại lâu dài với team, với người chơi và với pipeline vận hành."
+},
+{
+    term: "Content Shelf Life",
+    definition: "Tuổi thọ mà một nội dung còn giữ giá trị trước khi bị chơi chán, bị power creep hoặc bị meta bỏ qua."
+},
+{
+    term: "System Shelf Life",
+    definition: "Khoảng thời gian một hệ thống còn đủ giàu để tạo quyết định trước khi bị tối ưu sạch."
+},
+{
+    term: "Novelty Decay",
+    definition: "Tốc độ cảm giác mới lạ của một feature biến mất sau khi người chơi tiếp xúc lặp lại."
+},
+{
+    term: "Depth Retention",
+    definition: "Khả năng một hệ thống vẫn còn điều để khám phá và tối ưu sau khi lớp novelty đã chết."
+},
+{
+    term: "Production Feasibility",
+    definition: "Mức độ một ý tưởng có thể được làm ra trong nguồn lực, thời gian, trình độ team và pipeline thực tế."
+},
+{
+    term: "Implementation Risk",
+    definition: "Nguy cơ kỹ thuật, content hoặc UX khiến một feature dù hay trên giấy nhưng chết khi triển khai."
+},
+{
+    term: "Testing Surface",
+    definition: "Tổng lượng trường hợp cần test của một hệ thống. Surface càng lớn, QA càng mệt và bug càng dễ lọt."
+},
+{
+    term: "Balance Surface",
+    definition: "Tổng số tương tác cần cân bằng khi một system chạm vào class, item, level, mode, AI và economy."
+},
+{
+    term: "Content Authoring Cost",
+    definition: "Chi phí tạo thêm một đơn vị nội dung mới như level, quest, hero, relic hoặc encounter."
+},
+{
+    term: "System Maintenance Cost",
+    definition: "Chi phí dài hạn để tiếp tục sửa, mở rộng, test và vận hành một hệ thống sau khi ship."
+},
+{
+    term: "Design ROI",
+    definition: "Tỉ lệ giữa giá trị gameplay hoặc kinh doanh mà một feature tạo ra và tổng chi phí để làm, test, vận hành nó."
+},
+{
+    term: "High-Leverage Design",
+    definition: "Thiết kế tạo ra nhiều giá trị lớn chỉ từ một thay đổi nhỏ nhưng đặt đúng chỗ trong hệ thống."
+},
+{
+    term: "Low-Leverage Complexity",
+    definition: "Độ phức tạp thêm vào nhiều nhưng giá trị tạo ra ít, thường là dấu hiệu feature nên bị giết."
+},
+{
+    term: "Content Multipliers",
+    definition: "Những hệ thống làm một đơn vị content có thể tái tạo nhiều trải nghiệm khác nhau, ví dụ modifiers, procedural layers, build interaction."
+},
+{
+    term: "System Reuse Value",
+    definition: "Giá trị thu được khi một hệ thống hoặc quy tắc có thể tái sử dụng ở nhiều mode, nhiều content, nhiều lớp gameplay."
+},
+{
+    term: "Modular Tuning",
+    definition: "Khả năng chỉnh từng phần nhỏ của một hệ thống mà không phải chạm vào toàn bộ kiến trúc."
+},
+{
+    term: "Rule Cohesion",
+    definition: "Mức độ các luật trong game hợp nhau, hỗ trợ nhau và cùng nói một ngôn ngữ thiết kế."
+},
+{
+    term: "Rule Pollution",
+    definition: "Khi quá nhiều ngoại lệ, luật riêng, luật vá khiến game khó học, khó nhớ và khó mở rộng."
+},
+{
+    term: "Exception Cost",
+    definition: "Cái giá phải trả khi thêm một ngoại lệ đặc biệt vào hệ thống, thường làm tăng code debt, design debt và confusion."
+},
+{
+    term: "Pattern Library",
+    definition: "Kho các mẫu thiết kế, encounter, puzzle, reward hoặc AI behavior có thể tái dùng và biến thể."
+},
+{
+    term: "Encounter Grammar",
+    definition: "Ngôn ngữ thiết kế của encounter, gồm những thành phần cơ bản và cách chúng kết hợp với nhau để tạo thử thách mới."
+},
+{
+    term: "Level Grammar",
+    definition: "Bộ quy tắc ngầm về cách một level sử dụng không gian, vật thể, gating, pacing và signposting."
+},
+{
+    term: "Design Language",
+    definition: "Tập hợp quy ước nhất quán về màu, hình, âm thanh, timing và phản hồi để người chơi học cách đọc game."
+},
+{
+    term: "Semantic Consistency",
+    definition: "Sự nhất quán về ý nghĩa của tín hiệu, ví dụ màu đỏ luôn là nguy hiểm, ánh sáng vàng luôn là hướng đi đáng chú ý."
+},
+{
+    term: "System Readability Budget",
+    definition: "Ngân sách độ rõ mà một hệ thống được phép tiêu trước khi bắt đầu làm người chơi quá tải."
+},
+{
+    term: "Perceptual Load",
+    definition: "Khối lượng thứ người chơi phải nhìn, nghe và phân loại cùng lúc để đưa ra phản ứng đúng."
+},
+{
+    term: "Mastery Funnel",
+    definition: "Con đường mà hệ thống dẫn người chơi từ tiếp xúc ban đầu đến làm chủ hoàn toàn và tối ưu tinh vi."
+},
+{
+    term: "Aspirational Ladder",
+    definition: "Chuỗi mục tiêu cao dần khiến người chơi luôn thấy còn bậc tiếp theo để chinh phục."
+},
+{
+    term: "Endgame Elasticity",
+    definition: "Khả năng phần endgame kéo giãn thời gian chơi nhờ vẫn còn mục tiêu meaningful sau khi đã xong nội dung chính."
+},
+{
+    term: "Player-Created Goals",
+    definition: "Mục tiêu do chính cộng đồng hoặc từng người chơi tự đặt ra như speedrun, no-hit, challenge run, cosplay build."
+},
+{
+    term: "Self-Directed Play",
+    definition: "Trạng thái người chơi không còn cần designer giao việc cụ thể nữa mà tự tạo niềm vui từ hệ thống."
+},
+{
+    term: "Last-Mile Polish",
+    definition: "Lớp tinh chỉnh cuối giúp game chuyển từ ổn sang đáng nhớ, thường đến từ timing, feedback, camera, audio và clarity."
+},
+{
+    term: "Shipping Quality",
+    definition: "Mức độ hoàn thiện thật sự khi phát hành, không chỉ là hết bug nặng mà còn là cảm giác sản phẩm đã được mài đến nơi đến chốn."
+},
+{
+    term: "Frame Trap",
+    definition: "Tình huống trong combat (đặc biệt game đối kháng) nơi người chơi tạo khoảng hở giả để dụ đối thủ phản đòn rồi bị trừng phạt do chênh lệch frame."
+},
+{
+    term: "Footsies",
+    definition: "Trò chơi khoảng cách và nhịp độ trong combat, nơi người chơi kiểm soát space và bait hành động thay vì lao vào tấn công trực tiếp."
+},
+{
+    term: "Neutral Game",
+    definition: "Trạng thái khi chưa bên nào có lợi thế rõ ràng, nơi kỹ năng đọc tình huống và kiểm soát khoảng cách quyết định outcome."
+},
+{
+    term: "Spacing",
+    definition: "Kỹ thuật giữ khoảng cách tối ưu để vừa gây áp lực vừa tránh bị trừng phạt."
+},
+{
+    term: "Animation Commitment",
+    definition: "Mức độ mà một animation khóa người chơi vào hành động, ảnh hưởng trực tiếp đến risk và punish."
+},
+{
+    term: "Recovery Frames",
+    definition: "Khoảng thời gian sau khi hành động kết thúc mà người chơi chưa thể làm gì, là điểm yếu để bị punish."
+},
+{
+    term: "Active Frames",
+    definition: "Khoảng thời gian hitbox của một đòn tồn tại và có thể gây sát thương."
+},
+{
+    term: "Startup Frames",
+    definition: "Thời gian từ lúc input đến khi đòn bắt đầu có hiệu lực."
+},
+{
+    term: "Hit Confirm",
+    definition: "Khả năng nhận biết đòn đã trúng hay chưa để quyết định có tiếp tục combo hay dừng lại."
+},
+{
+    term: "Whiff Punish",
+    definition: "Trừng phạt khi đối thủ tung đòn hụt (whiff), thường yêu cầu đọc và timing chính xác."
+},
+{
+    term: "Option Select",
+    definition: "Input cho phép xử lý nhiều tình huống cùng lúc, tùy theo trạng thái game mà cho ra kết quả khác nhau."
+},
+{
+    term: "Input Priority",
+    definition: "Quy tắc game quyết định input nào được ưu tiên khi nhiều input xảy ra cùng lúc."
+},
+{
+    term: "Input Leniency",
+    definition: "Mức độ game cho phép sai số trong input mà vẫn nhận đúng hành động."
+},
+{
+    term: "Hit Priority",
+    definition: "Quy tắc xác định đòn nào thắng khi hai hitbox va chạm cùng lúc."
+},
+{
+    term: "Armor Mechanic",
+    definition: "Cơ chế cho phép nhân vật chịu đòn mà không bị interrupt trong một số trường hợp."
+},
+{
+    term: "Hyper Armor",
+    definition: "Phiên bản mạnh hơn của armor, không bị stagger ngay cả khi nhận sát thương lớn."
+},
+
+// -------- ECONOMY / GACHA --------
+{
+    term: "Banner Rotation",
+    definition: "Chu kỳ thay đổi các banner gacha để tạo cảm giác khan hiếm và thúc đẩy chi tiêu."
+},
+{
+    term: "Rate Up",
+    definition: "Tăng tỉ lệ xuất hiện của một nhân vật hoặc item cụ thể trong gacha."
+},
+{
+    term: "Soft Pity",
+    definition: "Cơ chế tăng dần tỉ lệ trúng vật phẩm hiếm khi người chơi quay nhiều lần mà chưa trúng."
+},
+{
+    term: "Hard Pity",
+    definition: "Ngưỡng đảm bảo người chơi chắc chắn nhận được vật phẩm hiếm sau số lần quay nhất định."
+},
+{
+    term: "Whale Optimization",
+    definition: "Thiết kế nhằm tối đa hóa chi tiêu từ nhóm người chơi trả nhiều tiền."
+},
+{
+    term: "Spender Segmentation",
+    definition: "Phân loại người chơi theo mức chi tiêu để tối ưu monetization."
+},
+{
+    term: "Time Gate",
+    definition: "Giới hạn tiến trình bằng thời gian nhằm kéo dài vòng đời và tăng retention."
+},
+{
+    term: "Energy System",
+    definition: "Cơ chế giới hạn số lần chơi trong một khoảng thời gian, thường gắn với monetization."
+},
+{
+    term: "Monetization Hook",
+    definition: "Điểm thiết kế khiến người chơi cảm thấy muốn chi tiền."
+},
+
+// -------- LIVE OPS / RETENTION --------
+{
+    term: "Content Drop",
+    definition: "Việc tung nội dung mới theo từng đợt để duy trì sự quan tâm."
+},
+{
+    term: "Event Loop",
+    definition: "Vòng lặp gameplay được thiết kế riêng cho event, thường khác core loop."
+},
+{
+    term: "Daily Quest Pressure",
+    definition: "Áp lực khiến người chơi phải đăng nhập hàng ngày để không mất lợi ích."
+},
+{
+    term: "Reactivation Trigger",
+    definition: "Sự kiện hoặc phần thưởng kéo người chơi cũ quay lại game."
+},
+{
+    term: "Session Spike",
+    definition: "Tăng đột biến số người chơi hoặc thời gian chơi do event hoặc update."
+},
+{
+    term: "Content Exhaustion",
+    definition: "Tình trạng người chơi chơi hết nội dung nhanh hơn tốc độ sản xuất."
+},
+
+// -------- LEVEL DESIGN --------
+{
+    term: "Critical Pathing",
+    definition: "Đường chính mà người chơi cần đi để hoàn thành level."
+},
+{
+    term: "Optional Path",
+    definition: "Đường phụ chứa reward hoặc bí mật, không bắt buộc."
+},
+{
+    term: "Sightline Design",
+    definition: "Cách thiết kế tầm nhìn để dẫn hướng và tạo anticipation."
+},
+{
+    term: "Landmark Placement",
+    definition: "Đặt các điểm nổi bật để giúp người chơi định hướng."
+},
+{
+    term: "Spatial Flow",
+    definition: "Cách người chơi di chuyển mượt mà qua không gian level."
+},
+{
+    term: "Chokepoint",
+    definition: "Điểm hẹp buộc người chơi phải đi qua, thường dùng để tạo combat hoặc tension."
+},
+{
+    term: "Safe Pocket",
+    definition: "Khu vực tạm an toàn trong một encounter căng thẳng."
+},
+{
+    term: "Traversal Readability",
+    definition: "Mức độ người chơi hiểu được đường đi và cách di chuyển trong môi trường."
+},
+
+// -------- NARRATIVE SYSTEM --------
+{
+    term: "Branch Locking",
+    definition: "Cơ chế khóa một nhánh cốt truyện khi người chơi chọn nhánh khác."
+},
+{
+    term: "Narrative Payoff",
+    definition: "Khoảnh khắc phần thưởng cốt truyện đạt đỉnh sau buildup."
+},
+{
+    term: "Foreshadowing",
+    definition: "Gợi ý trước các sự kiện sẽ xảy ra trong tương lai."
+},
+{
+    term: "Reactive Narrative",
+    definition: "Cốt truyện phản ứng theo hành động của người chơi."
+},
+{
+    term: "Systemic Narrative",
+    definition: "Câu chuyện phát sinh từ gameplay thay vì script cố định."
+},
+
+// -------- MULTIPLAYER --------
+{
+    term: "Netcode",
+    definition: "Hệ thống xử lý đồng bộ dữ liệu giữa người chơi trong multiplayer."
+},
+{
+    term: "Latency Compensation",
+    definition: "Cơ chế bù trễ để đảm bảo trải nghiệm công bằng khi mạng có delay."
+},
+{
+    term: "Tick Rate",
+    definition: "Tần suất server cập nhật trạng thái game mỗi giây."
+},
+{
+    term: "Desync",
+    definition: "Khi trạng thái game giữa client và server không đồng nhất."
+},
+{
+    term: "Host Advantage",
+    definition: "Lợi thế của người chơi host do độ trễ thấp hơn."
+},
+{
+    term: "Match Integrity",
+    definition: "Mức độ công bằng và không bị gian lận trong một trận đấu."
+},
+{
+    term: "Smurfing",
+    definition: "Người chơi giỏi dùng tài khoản mới để đấu với người yếu hơn."
+},
+{
+    term: "Boosting",
+    definition: "Hành vi tăng rank không chính đáng nhờ người khác chơi hộ hoặc kéo rank."
+},
+{
+    term: "Queue Time Optimization",
+    definition: "Cân bằng giữa thời gian chờ trận và chất lượng matchmaking."
 }
 ];
-// Sắp xếp theo tên thuật ngữ (A-Z)
-glossaryData.sort((a, b) => a.term.localeCompare(b.term, 'vi', { sensitivity: 'base' }));
-// DOM elements
-const gridContainer = document.getElementById('termsGrid');
+// Sắp xếp glossary theo tên (nếu chưa có)
+if (typeof glossaryData !== 'undefined') {
+    glossaryData.sort((a, b) => a.term.localeCompare(b.term, 'vi', { sensitivity: 'base' }));
+}
+
+// DOM elements liên quan glossary
+const glossaryTab = document.getElementById('glossaryTab');
 const searchInput = document.getElementById('searchInput');
 const resultCountSpan = document.getElementById('resultCount');
+const termsGrid = document.getElementById('termsGrid');
 const modalOverlay = document.getElementById('termModal');
 const modalTitle = document.getElementById('modalTermTitle');
-const modalDefinitionPara = document.getElementById('modalDefinition');
+const modalDefinition = document.getElementById('modalDefinition');
 const closeModalBtn = document.getElementById('closeModalBtn');
 
-// Render cards theo từ khóa tìm kiếm
+// Hàm escape HTML
+function escapeHtml(str) {
+    if (!str) return '';
+    return str.replace(/[&<>]/g, function(m) {
+        if (m === '&') return '&amp;';
+        if (m === '<') return '&lt;';
+        if (m === '>') return '&gt;';
+        return m;
+    }).replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+}
+
+// Chọn icon ngẫu nhiên
+function getRandomEpicIcon(index) {
+    const icons = ['fas fa-cogs', 'fas fa-map', 'fas fa-robot', 'fas fa-cube', 'fas fa-dragon', 'fas fa-dice-d6', 'fas fa-code-branch', 'fas fa-users', 'fas fa-gamepad', 'fas fa-chess-queen'];
+    return icons[index % icons.length];
+}
+
+// Render glossary
 function renderTerms(filterKeyword = '') {
     const keywordLower = filterKeyword.trim().toLowerCase();
     let filteredTerms = [...glossaryData];
-
     if (keywordLower !== '') {
         filteredTerms = glossaryData.filter(item =>
             item.term.toLowerCase().includes(keywordLower) ||
             item.definition.toLowerCase().includes(keywordLower)
         );
     }
-
-    const total = filteredTerms.length;
-    resultCountSpan.innerHTML = `<i class="fas fa-layer-group"></i> ${total} thuật ngữ`;
-
+    resultCountSpan.innerHTML = `<i class="fas fa-layer-group"></i> ${filteredTerms.length} thuật ngữ`;
     if (filteredTerms.length === 0) {
-        gridContainer.innerHTML = `
-            <div class="no-results">
-                <i class="fas fa-skull" style="font-size: 2rem; opacity: 0.6;"></i>
-                <p style="margin-top: 1rem;">Không tìm thấy thuật ngữ "${escapeHtml(filterKeyword)}"</p>
-                <p style="font-size: 0.8rem;">Hãy thử từ khóa khác như Core Loop, UX, NPC, Retention...</p>
-            </div>
-        `;
+        termsGrid.innerHTML = `<div class="no-results"><i class="fas fa-skull"></i><p>Không tìm thấy thuật ngữ "${escapeHtml(filterKeyword)}"</p></div>`;
         return;
     }
-
     let cardsHTML = '';
-    for (let i = 0; i < filteredTerms.length; i++) {
-        const termObj = filteredTerms[i];
-        const iconClass = getRandomEpicIcon(i);
-
+    filteredTerms.forEach((item, idx) => {
+        const iconClass = getRandomEpicIcon(idx);
         cardsHTML += `
-            <div class="term-card" data-term-name="${escapeHtml(termObj.term)}">
+            <div class="term-card" data-term-name="${escapeHtml(item.term)}">
                 <div class="card-icon"><i class="${iconClass}"></i></div>
-                <div class="term-name">${escapeHtml(termObj.term)}</div>
+                <div class="term-name">${escapeHtml(item.term)}</div>
                 <div class="click-hint"><i class="fas fa-mouse-pointer"></i> BẤM ĐỂ XEM CHI TIẾT</div>
             </div>
         `;
-    }
-
-    gridContainer.innerHTML = cardsHTML;
+    });
+    termsGrid.innerHTML = cardsHTML;
 }
 
-// Chọn icon
-function getRandomEpicIcon(index) {
-    const icons = [
-        'fas fa-cogs', 'fas fa-map', 'fas fa-robot', 'fas fa-cube',
-        'fas fa-dragon', 'fas fa-dice-d6', 'fas fa-code-branch', 'fas fa-users',
-        'fas fa-hand-peace', 'fas fa-gamepad', 'fas fa-chess-queen', 'fas fa-skull',
-        'fas fa-shield-alt', 'fas fa-meteor', 'fas fa-hat-wizard', 'fas fa-bolt',
-        'fas fa-coins', 'fas fa-chart-line', 'fas fa-crosshairs', 'fas fa-brain'
-    ];
-    return icons[index % icons.length];
-}
-
-// Escape HTML
-function escapeHtml(str) {
-    if (!str) return '';
-    return str
-        .replace(/[&<>"]/g, function (m) {
-            if (m === '&') return '&amp;';
-            if (m === '<') return '&lt;';
-            if (m === '>') return '&gt;';
-            if (m === '"') return '&quot;';
-            return m;
-        })
-        .replace(/'/g, '&#39;');
-}
-
-// Mở modal
-function openModal(termName) {
+// Mở modal glossary
+function openTermModal(termName) {
     const foundTerm = glossaryData.find(item => item.term === termName);
-
     if (foundTerm) {
         modalTitle.innerText = foundTerm.term;
-        modalDefinitionPara.innerText = foundTerm.definition;
-    } else {
-        modalTitle.innerText = termName;
-        modalDefinitionPara.innerText = 'Định nghĩa chi tiết hiện đang được cập nhật. Hãy khám phá thêm thuật ngữ khác.';
+        modalDefinition.innerText = foundTerm.definition;
+        modalOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
     }
-
-    modalOverlay.classList.add('active');
-    document.body.style.overflow = 'hidden';
 }
 
-// Đóng modal
+// Đóng modal glossary
 function closeModal() {
     modalOverlay.classList.remove('active');
     document.body.style.overflow = '';
 }
 
-// Click card
-function handleCardClick(e) {
-    const card = e.target.closest('.term-card');
-    if (!card) return;
-
-    const termAttr = card.getAttribute('data-term-name');
-    if (termAttr) {
-        openModal(termAttr);
-    }
+// Xử lý click nền mờ
+function handleModalOverlayClick(e) {
+    if (e.target === modalOverlay) closeModal();
 }
 
-// Search
-function onSearchInput() {
-    const keyword = searchInput.value;
-    renderTerms(keyword);
-}
-
-// ESC để đóng modal
-function handleEscKey(e) {
-    if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
-        closeModal();
-    }
-}
-
-// Click nền mờ để đóng modal
-function handleOverlayClick(e) {
-    if (e.target === modalOverlay) {
-        closeModal();
-    }
-}
-
-// Gắn sự kiện
-function bindEvents() {
-    searchInput.addEventListener('input', onSearchInput);
-    gridContainer.addEventListener('click', handleCardClick);
+// Gán sự kiện glossary
+function initGlossaryEvents() {
+    searchInput.addEventListener('input', (e) => renderTerms(e.target.value));
+    termsGrid.addEventListener('click', (e) => {
+        const card = e.target.closest('.term-card');
+        if (card) openTermModal(card.dataset.termName);
+    });
     closeModalBtn.addEventListener('click', closeModal);
-    modalOverlay.addEventListener('click', handleOverlayClick);
-    window.addEventListener('keydown', handleEscKey);
+    modalOverlay.addEventListener('click', handleModalOverlayClick);
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modalOverlay.classList.contains('active')) closeModal();
+    });
 }
-
-// Init
-function init() {
-    renderTerms('');
-    bindEvents();
-}
-
-init();

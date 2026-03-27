@@ -14,14 +14,12 @@ body {
     scroll-behavior: smooth;
 }
 
-/* Epic Games style container */
 .container {
     max-width: 1400px;
     margin: 0 auto;
     padding: 2rem 2rem 4rem;
 }
 
-/* Header area */
 .hero-section {
     margin-bottom: 3rem;
     position: relative;
@@ -89,14 +87,67 @@ h1 {
     color: #2e8bff;
 }
 
-/* Search + filter bar */
+/* Tabs */
+.tabs-container {
+    display: flex;
+    gap: 12px;
+    margin: 2rem 0 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 0;
+}
+
+.tab-btn {
+    background: transparent;
+    border: none;
+    padding: 0.75rem 1.8rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #9aaec9;
+    cursor: pointer;
+    transition: all 0.2s;
+    border-radius: 40px 40px 0 0;
+    font-family: inherit;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tab-btn i {
+    font-size: 1.1rem;
+}
+
+.tab-btn:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.tab-btn.active {
+    color: #2e8bff;
+    border-bottom: 2px solid #2e8bff;
+    background: linear-gradient(0deg, rgba(46, 139, 255, 0.1), transparent);
+}
+
+.tab-content {
+    display: none;
+    animation: fadeIn 0.25s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 .toolbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
-    margin: 2rem 0 1.5rem;
+    margin: 1.5rem 0 1.5rem;
 }
 
 .search-wrapper {
@@ -143,9 +194,28 @@ h1 {
     font-weight: 500;
     border: 1px solid rgba(255,255,255,0.1);
     letter-spacing: 0.3px;
+    white-space: nowrap;
 }
 
-/* Grid cards inspired by Epic Games store */
+.quiz-trigger {
+    background: linear-gradient(135deg, #2e8bff, #a855f7);
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 0.6rem 1.2rem;
+    border-radius: 40px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.85rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.quiz-trigger:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 12px rgba(46, 139, 255, 0.5);
+}
+
+/* Glossary grid */
 .terms-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -153,12 +223,106 @@ h1 {
     margin-top: 24px;
 }
 
+/* Games grid */
+.games-intro {
+    background: rgba(46, 139, 255, 0.1);
+    border-left: 3px solid #2e8bff;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+    color: #bbd4ff;
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 28px;
+    margin-top: 16px;
+}
+
+.game-card {
+    background: rgba(20, 24, 31, 0.7);
+    backdrop-filter: blur(2px);
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 1.8rem 1.2rem;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.game-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #ff8c00, #a855f7, #2e8bff);
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.game-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(46, 139, 255, 0.5);
+    background: rgba(28, 34, 44, 0.9);
+    box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.5);
+}
+
+.game-card:hover::before {
+    opacity: 1;
+}
+
+.game-card-icon {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    color: #ffaa44;
+}
+
+.game-card-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    background: linear-gradient(to bottom, #ffffff, #cfdfef);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.game-card-desc {
+    font-size: 0.9rem;
+    color: #b0c4de;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.game-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.game-tag {
+    background: rgba(46, 139, 255, 0.2);
+    border-radius: 20px;
+    padding: 0.2rem 0.7rem;
+    font-size: 0.7rem;
+    color: #8bb9fe;
+    border: 1px solid rgba(46, 139, 255, 0.4);
+}
+
+/* Card chung */
 .term-card {
     background: rgba(20, 24, 31, 0.7);
     backdrop-filter: blur(2px);
     border-radius: 24px;
     border: 1px solid rgba(255, 255, 255, 0.08);
-    padding: 1.8rem 1rem 1.8rem 1rem;
+    padding: 1.8rem 1rem;
     text-align: center;
     cursor: pointer;
     transition: all 0.25s cubic-bezier(0.2, 0.9, 0.4, 1.1);
@@ -223,7 +387,6 @@ h1 {
     width: 80%;
 }
 
-/* No results */
 .no-results {
     text-align: center;
     padding: 4rem 2rem;
@@ -234,7 +397,28 @@ h1 {
     color: #8aa0c0;
 }
 
-/* MODAL */
+/* Ảnh game card */
+.game-card-image {
+    width: 100%;
+    height: 140px;
+    overflow: hidden;
+    border-radius: 16px;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #1a1f2a, #0f1117);
+}
+
+.game-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.game-card:hover .game-card-image img {
+    transform: scale(1.05);
+}
+
+/* Modal styles */
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -267,6 +451,9 @@ h1 {
     transform: scale(0.96);
     transition: transform 0.2s cubic-bezier(0.2, 0.9, 0.4, 1.1);
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    max-height: 90vh;
 }
 
 .modal-overlay.active .modal-container {
@@ -280,6 +467,7 @@ h1 {
     padding: 1.5rem 1.8rem;
     background: rgba(0, 0, 0, 0.3);
     border-bottom: 1px solid rgba(255,255,255,0.1);
+    flex-shrink: 0;
 }
 
 .modal-header h3 {
@@ -317,11 +505,8 @@ h1 {
     font-size: 1.05rem;
     line-height: 1.55;
     color: #d2e0ff;
-}
-
-.definition-text {
-    font-weight: 400;
-    letter-spacing: 0.2px;
+    overflow-y: auto;
+    flex: 1;
 }
 
 .modal-footer {
@@ -332,13 +517,73 @@ h1 {
     display: flex;
     gap: 12px;
     align-items: center;
+    flex-shrink: 0;
 }
 
-.modal-footer i {
-    font-size: 0.8rem;
+/* Quiz styles */
+.quiz-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
 }
 
-/* footer */
+.quiz-option {
+    background: #1e2430;
+    border: 1px solid #2a3340;
+    border-radius: 60px;
+    padding: 12px 20px;
+    text-align: left;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s;
+    color: #eef2ff;
+}
+
+.quiz-option:hover {
+    background: rgba(46, 139, 255, 0.2);
+    border-color: #2e8bff;
+}
+
+.quiz-option.disabled {
+    opacity: 0.6;
+    cursor: default;
+}
+
+.quiz-feedback {
+    margin-top: 1rem;
+    padding: 0.8rem;
+    border-radius: 16px;
+    background: rgba(0, 0, 0, 0.3);
+    font-size: 0.95rem;
+}
+
+.quiz-feedback.correct {
+    color: #6fcf97;
+    border-left: 3px solid #6fcf97;
+    background: rgba(111, 207, 151, 0.1);
+}
+
+.quiz-feedback.wrong {
+    color: #ff7675;
+    border-left: 3px solid #ff7675;
+    background: rgba(255, 118, 117, 0.1);
+}
+
+.next-quiz-btn {
+    margin-top: 20px;
+    background: #2e8bff;
+    border: none;
+    border-radius: 40px;
+    padding: 10px 20px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    font-family: inherit;
+    transition: background 0.2s;
+}
+
 .page-footer {
     margin-top: 5rem;
     text-align: center;
@@ -348,29 +593,42 @@ h1 {
     color: #5f7393;
 }
 
-/* responsive */
+/* Điều chỉnh riêng cho modal game */
+#gameModal .modal-container {
+    max-width: 700px;
+    width: 90%;
+}
+
 @media (max-width: 720px) {
     .container {
         padding: 1.2rem;
     }
-
     h1 {
         font-size: 1.8rem;
     }
-
-    .terms-grid {
-        gap: 18px;
+    .tabs-container {
+        flex-direction: column;
+        gap: 8px;
+        border-bottom: none;
     }
-
-    .term-card {
-        padding: 1.2rem 0.8rem;
+    .tab-btn {
+        border-radius: 40px;
+        justify-content: center;
+        background: rgba(255,255,255,0.05);
     }
-
-    .term-name {
-        font-size: 1.2rem;
+    .tab-btn.active {
+        border-bottom: none;
+        background: rgba(46, 139, 255, 0.2);
     }
-
-    .modal-header h3 {
-        font-size: 1.5rem;
+    .toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .result-count {
+        text-align: center;
+        white-space: normal;
+    }
+    .games-grid {
+        grid-template-columns: 1fr;
     }
 }

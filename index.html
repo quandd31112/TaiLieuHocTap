@@ -4,12 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>Game Design Lexicon | Epic Style Glossary</title>
-
-    <!-- Google Fonts & Font Awesome 6 -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-    <!-- File CSS riêng -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -28,16 +24,41 @@
             </div>
         </div>
 
-        <div class="toolbar">
+        <!-- Tabs -->
+        <div class="tabs-container">
+            <button class="tab-btn active" data-tab="glossary">
+                <i class="fas fa-book"></i> THUẬT NGỮ
+            </button>
+            <button class="tab-btn" data-tab="games">
+                <i class="fas fa-gamepad"></i> PHÂN TÍCH GAME
+            </button>
+        </div>
+
+        <!-- Thanh công cụ (chỉ hiển thị khi ở tab glossary) -->
+        <div class="toolbar glossary-toolbar">
             <div class="search-wrapper">
                 <i class="fas fa-search"></i>
                 <input type="text" id="searchInput" placeholder="Tìm kiếm thuật ngữ... (Game Mechanics, Level Design, NPC...)" autocomplete="off">
             </div>
             <div class="result-count" id="resultCount">Đang tải...</div>
+            <button id="quizBtn" class="quiz-trigger">
+                <i class="fas fa-gamepad"></i> THỬ THÁCH TRẮC NGHIỆM
+            </button>
         </div>
 
-        <div id="termsGrid" class="terms-grid">
-            <div class="no-results" style="display: none;">Không tìm thấy thuật ngữ phù hợp</div>
+        <!-- Nội dung tab Glossary -->
+        <div id="glossaryTab" class="tab-content active">
+            <div id="termsGrid" class="terms-grid">
+                <div class="no-results" style="display: none;">Không tìm thấy thuật ngữ phù hợp</div>
+            </div>
+        </div>
+
+        <!-- Nội dung tab Games -->
+        <div id="gamesTab" class="tab-content">
+            <div class="games-intro">
+                <i class="fas fa-chart-line"></i> Phân tích chuyên sâu về các tựa game thành công – Yếu tố thiết kế, lý do thành công và bài học.
+            </div>
+            <div id="gamesGrid" class="games-grid"></div>
         </div>
 
         <div class="page-footer">
@@ -45,7 +66,7 @@
         </div>
     </div>
 
-    <!-- Modal -->
+    <!-- Modal Glossary -->
     <div id="termModal" class="modal-overlay">
         <div class="modal-container">
             <div class="modal-header">
@@ -63,7 +84,49 @@
         </div>
     </div>
 
-    <!-- File JS riêng -->
-    <script src="script.js"></script>
+    <!-- Modal Game Analysis -->
+    <div id="gameModal" class="modal-overlay">
+        <div class="modal-container" style="max-width: 700px;">
+            <div class="modal-header">
+                <h3 id="gameModalTitle"></h3>
+                <button class="close-modal" id="closeGameModalBtn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="gameModalContent"></div>
+            </div>
+            <div class="modal-footer">
+                <i class="fas fa-lightbulb"></i> Phân tích dựa trên nguyên lý thiết kế game
+            </div>
+        </div>
+    </div>
+
+    <!-- Quiz Modal -->
+    <div id="quizModal" class="modal-overlay">
+        <div class="modal-container" style="max-width: 600px;">
+            <div class="modal-header">
+                <h3><i class="fas fa-question-circle"></i> TRẮC NGHIỆM THUẬT NGỮ</h3>
+                <button class="close-modal" id="closeQuizBtn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p id="quizDefinition" style="font-size: 1.2rem; font-weight: 500; margin-bottom: 1.5rem; line-height: 1.5;">
+                    Định nghĩa sẽ hiển thị ở đây...
+                </p>
+                <div id="quizOptions" class="quiz-options"></div>
+                <div id="quizFeedback" class="quiz-feedback"></div>
+                <button id="nextQuizBtn" class="next-quiz-btn">
+                    CÂU HỎI TIẾP THEO <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Các file JS đã được tách -->
+    <script src="glossary.js"></script>
+    <script src="games.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
