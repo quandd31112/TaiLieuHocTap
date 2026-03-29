@@ -32,6 +32,9 @@
             <button class="tab-btn" data-tab="games">
                 <i class="fas fa-gamepad"></i> PHÂN TÍCH GAME
             </button>
+            <button class="tab-btn" data-tab="book">
+                <i class="fas fa-book-open"></i> SÁCH
+            </button>
         </div>
 
         <!-- Thanh công cụ (chỉ hiển thị khi ở tab glossary) -->
@@ -59,6 +62,36 @@
                 <i class="fas fa-chart-line"></i> Phân tích chuyên sâu về các tựa game thành công – Yếu tố thiết kế, lý do thành công và bài học.
             </div>
             <div id="gamesGrid" class="games-grid"></div>
+        </div>
+
+        <!-- Nội dung tab Sách -->
+        <div id="bookTab" class="tab-content">
+            <div class="book-hero">
+                <div class="book-cover-icon"><i class="fas fa-crown"></i></div>
+                <h2>The Art of Game Design</h2>
+                <p class="book-author">by Jesse Schell</p>
+                <p class="book-desc">Cuốn sách kinh điển với 100 Lens giúp nhìn nhận thiết kế game từ mọi góc độ. Dưới đây là tóm tắt các Lens và cấu trúc sách.</p>
+                <div class="book-actions">
+                    <button id="downloadPdfBtn" class="download-pdf-btn"><i class="fas fa-download"></i> Tải PDF (bản mẫu)</button>
+                </div>
+            </div>
+            <div class="book-section">
+                <h3><i class="fas fa-camera"></i> 100 Lenses của Jesse Schell</h3>
+                <div id="lensesGrid" class="lenses-grid"></div>
+            </div>
+            <div class="book-section">
+                <h3><i class="fas fa-list-ul"></i> Cấu trúc sách</h3>
+                <div id="tocList" class="toc-list"></div>
+            </div>
+            <!-- Phần Công thức & Ví dụ thú vị -->
+<div class="book-section">
+    <h3><i class="fas fa-flask"></i> Công thức & Ví dụ thú vị</h3>
+    <div id="formulasExamples" class="formulas-examples"></div>
+</div>
+            <div class="book-section">
+                <h3><i class="fas fa-quote-left"></i> Trích dẫn nổi bật</h3>
+                <div id="quotesList" class="quotes-list"></div>
+            </div>
         </div>
 
         <div class="page-footer">
@@ -121,12 +154,14 @@
                     CÂU HỎI TIẾP THEO <i class="fas fa-arrow-right"></i>
                 </button>
             </div>
+            
         </div>
     </div>
 
-    <!-- Các file JS đã được tách -->
+    <!-- Các file JS -->
     <script src="glossary.js"></script>
     <script src="games.js"></script>
+    <script src="book.js"></script>
     <script src="main.js"></script>
 </body>
 </html>

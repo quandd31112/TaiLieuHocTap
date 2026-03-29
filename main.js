@@ -1,6 +1,5 @@
 // ==================== MAIN MODULE ====================
 // File này chứa logic chung: tab switching, quiz, và tích hợp các module khác.
-// Giả sử glossary.js và games.js đã được load trước đó.
 
 // DOM elements
 const tabBtns = document.querySelectorAll('.tab-btn');
@@ -22,14 +21,22 @@ function switchTab(tabId) {
     if (tabId === 'glossary') {
         document.getElementById('glossaryTab').classList.add('active');
         document.getElementById('gamesTab').classList.remove('active');
+        document.getElementById('bookTab').classList.remove('active');
         glossaryToolbar.style.display = 'flex';
-        // Gọi lại renderTerms để đảm bảo hiển thị
         if (typeof renderTerms === 'function') renderTerms(searchInput.value);
-    } else {
+    } else if (tabId === 'games') {
         document.getElementById('glossaryTab').classList.remove('active');
         document.getElementById('gamesTab').classList.add('active');
+        document.getElementById('bookTab').classList.remove('active');
         glossaryToolbar.style.display = 'none';
         if (typeof renderGames === 'function') renderGames();
+    } else if (tabId === 'book') {
+        document.getElementById('glossaryTab').classList.remove('active');
+        document.getElementById('gamesTab').classList.remove('active');
+        document.getElementById('bookTab').classList.add('active');
+        glossaryToolbar.style.display = 'none';
+        // Khởi tạo nội dung sách nếu chưa
+        if (typeof window.initBookTab === 'function') window.initBookTab();
     }
 }
 
